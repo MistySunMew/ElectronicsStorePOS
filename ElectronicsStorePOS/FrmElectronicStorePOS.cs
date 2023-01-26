@@ -41,5 +41,14 @@ namespace ElectronicsStorePOS
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// When the "Cart" button is clicked, creates 
+        /// and displays an instance of the Cart form
+        /// </summary>
+        private void BtnOpenCartForm_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -32,6 +32,7 @@
             this.btnOpenUpdateProductForm = new System.Windows.Forms.Button();
             this.btnDeleteProduct = new System.Windows.Forms.Button();
             this.lstProducts = new System.Windows.Forms.ListBox();
+            this.btnOpenCartForm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnOpenCreateProductForm
@@ -73,11 +74,22 @@
             this.lstProducts.Size = new System.Drawing.Size(145, 304);
             this.lstProducts.TabIndex = 3;
             // 
+            // btnOpenCartForm
+            // 
+            this.btnOpenCartForm.Location = new System.Drawing.Point(439, 292);
+            this.btnOpenCartForm.Name = "btnOpenCartForm";
+            this.btnOpenCartForm.Size = new System.Drawing.Size(105, 40);
+            this.btnOpenCartForm.TabIndex = 4;
+            this.btnOpenCartForm.Text = "Cart";
+            this.btnOpenCartForm.UseVisualStyleBackColor = true;
+            this.btnOpenCartForm.Click += new System.EventHandler(this.BtnOpenCartForm_Click);
+            // 
             // FrmElectronicStorePOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.btnOpenCartForm);
             this.Controls.Add(this.lstProducts);
             this.Controls.Add(this.btnDeleteProduct);
             this.Controls.Add(this.btnOpenUpdateProductForm);
@@ -94,5 +106,6 @@
         private Button btnOpenUpdateProductForm;
         private Button btnDeleteProduct;
         private ListBox lstProducts;
+        private Button btnOpenCartForm;
     }
 }
