@@ -21,6 +21,9 @@ namespace ElectronicsStorePOS
 
             // Display it to the user
             createProductForm.ShowDialog();
+
+            // Reset Product list-box
+            PopulateProductsLst();
         }
 
         /// <summary>
@@ -34,6 +37,9 @@ namespace ElectronicsStorePOS
 
             // Display it to the user
             updateProductForm.ShowDialog();
+
+            // Reset Product list-box
+            PopulateProductsLst();
         }
 
         /// <summary>
@@ -62,6 +68,29 @@ namespace ElectronicsStorePOS
         /// When "Home" form is opened, displays all Products in db
         /// </summary>
         private void FrmElectronicStorePOS_Load(object sender, EventArgs e)
+        {
+            // Populate the Products list-box
+            PopulateProductsLst();
+        }
+
+        /// <summary>
+        /// When called, clears the Products list-box, 
+        /// and re-populates it with updated data from the db
+        /// </summary>
+        public void PopulateProductsLst()
+        {
+            // Clear the Products list-box
+            lstProducts.Items.Clear();
+
+            // Re-populate the Products list-box
+            GetAllProducts();
+        }
+
+        /// <summary>
+        /// When called, gets all Products from the db and 
+        /// displays them in the Products list-box
+        /// </summary>
+        private void GetAllProducts()
         {
             // Establish connection to db
             using ProductContext dbContext = new();
