@@ -12,10 +12,13 @@ namespace ElectronicsStorePOS
 {
     public partial class FrmUpdateProduct : Form
     {
-        public FrmUpdateProduct()
+        public FrmUpdateProduct(Product p)
         {
+            this.p = p;
             InitializeComponent();
         }
+
+        private Product p;
 
         /// <summary>
         /// Adds items to comboboxes
@@ -39,6 +42,13 @@ namespace ElectronicsStorePOS
             cbxProductCategory.Items.Add("Display");
             cbxProductCategory.Items.Add("Software");
             cbxProductCategory.Items.Add("Other");
+
+            txtProductName.Text = p.Name;
+            txtProductPrice.Text = p.Price.ToString();
+            txtProductDesc.Text = p.Desc;
+            txtProductSKU.Text = p.SKU;
+            cbxGameRating.Text = p.Rating;
+            cbxProductCategory.Text = p.Category;
         }
 
 
@@ -59,7 +69,27 @@ namespace ElectronicsStorePOS
         /// <param name="e"></param>
         private void btnUpdateProduct_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            if (isValid())
+            {
+                p.Name = txtProductName.Text;
+                p.Price = Convert.ToDouble(txtProductPrice.Text);
+                p.Desc = txtProductDesc.Text;
+                p.Category = cbxProductCategory.Text;
+                p.SKU = txtProductSKU.Text;
+
+                ProductContext dbContext = new();
+
+                if (cbxProductCategory.Text == "Game")
+                {
+                    p.Rating = cbxGameRating.Text;
+                }
+
+                dbContext.Update(p);
+                dbContext.SaveChanges();
+
+                MessageBox.Show("Updated Product");
+                btnClearForm_Click(sender, e);
+            }
         }
 
         /// <summary>
