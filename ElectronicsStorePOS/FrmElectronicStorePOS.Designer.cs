@@ -73,6 +73,7 @@
             this.lstProducts.Name = "lstProducts";
             this.lstProducts.Size = new System.Drawing.Size(273, 304);
             this.lstProducts.TabIndex = 3;
+            this.lstProducts.SelectedIndexChanged += new System.EventHandler(this.LstProducts_SelectedIndexChanged);
             // 
             // btnOpenCartForm
             // 
@@ -96,6 +97,7 @@
             this.Controls.Add(this.btnOpenCreateProductForm);
             this.Name = "FrmElectronicStorePOS";
             this.Text = "Electronic Store POS";
+            this.Load += new System.EventHandler(this.FrmElectronicStorePOS_Load);
             this.ResumeLayout(false);
 
 		}
