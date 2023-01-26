@@ -75,7 +75,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 156);
+            this.label4.Location = new System.Drawing.Point(8, 191);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(202, 25);
             this.label4.TabIndex = 3;
@@ -84,7 +84,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(126, 199);
+            this.label5.Location = new System.Drawing.Point(126, 148);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(84, 25);
             this.label5.TabIndex = 4;
@@ -93,7 +93,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(166, 256);
+            this.label6.Location = new System.Drawing.Point(166, 228);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(44, 25);
             this.label6.TabIndex = 5;
@@ -122,44 +122,48 @@
             // 
             // cbxGameRating
             // 
+            this.cbxGameRating.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxGameRating.FormattingEnabled = true;
-            this.cbxGameRating.Location = new System.Drawing.Point(237, 148);
+            this.cbxGameRating.Location = new System.Drawing.Point(237, 183);
             this.cbxGameRating.Name = "cbxGameRating";
             this.cbxGameRating.Size = new System.Drawing.Size(182, 33);
             this.cbxGameRating.TabIndex = 9;
             // 
             // cbxProductCategory
             // 
+            this.cbxProductCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxProductCategory.FormattingEnabled = true;
-            this.cbxProductCategory.Location = new System.Drawing.Point(237, 191);
+            this.cbxProductCategory.Location = new System.Drawing.Point(237, 145);
             this.cbxProductCategory.Name = "cbxProductCategory";
             this.cbxProductCategory.Size = new System.Drawing.Size(182, 33);
             this.cbxProductCategory.TabIndex = 10;
             // 
             // txtProductSKU
             // 
-            this.txtProductSKU.Location = new System.Drawing.Point(237, 250);
+            this.txtProductSKU.Location = new System.Drawing.Point(237, 222);
             this.txtProductSKU.Name = "txtProductSKU";
             this.txtProductSKU.Size = new System.Drawing.Size(150, 31);
             this.txtProductSKU.TabIndex = 11;
             // 
             // btnCreateProduct
             // 
-            this.btnCreateProduct.Location = new System.Drawing.Point(33, 306);
+            this.btnCreateProduct.Location = new System.Drawing.Point(30, 267);
             this.btnCreateProduct.Name = "btnCreateProduct";
             this.btnCreateProduct.Size = new System.Drawing.Size(198, 74);
             this.btnCreateProduct.TabIndex = 12;
             this.btnCreateProduct.Text = "Create Product";
             this.btnCreateProduct.UseVisualStyleBackColor = true;
+            this.btnCreateProduct.Click += new System.EventHandler(this.btnCreateProduct_Click);
             // 
             // btnClearForm
             // 
-            this.btnClearForm.Location = new System.Drawing.Point(237, 306);
+            this.btnClearForm.Location = new System.Drawing.Point(234, 267);
             this.btnClearForm.Name = "btnClearForm";
             this.btnClearForm.Size = new System.Drawing.Size(198, 74);
             this.btnClearForm.TabIndex = 13;
             this.btnClearForm.Text = "Clear Form";
             this.btnClearForm.UseVisualStyleBackColor = true;
+            this.btnClearForm.Click += new System.EventHandler(this.btnClearForm_Click);
             // 
             // btnReturnHome
             // 
@@ -175,7 +179,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(626, 404);
+            this.ClientSize = new System.Drawing.Size(626, 355);
             this.Controls.Add(this.btnReturnHome);
             this.Controls.Add(this.btnClearForm);
             this.Controls.Add(this.btnCreateProduct);

@@ -12,18 +12,18 @@ namespace ElectronicsStorePOS
         /// <summary>
         /// The Primary key identity column
         /// </summary>
-        public required int ProductID { get; set; }
+        public int ProductID { get; set; }
 
         /// <summary>
         /// The Product's name
         /// </summary>
-        public required string Name { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// The sales price of the Product
         /// </summary>
         [Range(0, Double.MaxValue)]
-        public required double Price { get; set; }
+        public double Price { get; set; }
 
         /// <summary>
         /// The Product's description
@@ -38,11 +38,11 @@ namespace ElectronicsStorePOS
         /// <summary>
         /// The category the Product belongs in
         /// </summary>
-        public required string Category { get; set; }
+        public string Category { get; set; }
 
         /// <summary>
         /// The Product's Stock Keeping Unit
         /// </summary>
-        public required string SKU { get; set; }
+        public string SKU { get; set; }
     }
 }
