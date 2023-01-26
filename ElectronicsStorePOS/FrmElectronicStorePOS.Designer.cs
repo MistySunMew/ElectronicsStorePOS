@@ -35,7 +35,7 @@
             // 
             // btnOpenCreateProductForm
             // 
-            this.btnOpenCreateProductForm.Location = new System.Drawing.Point(408, 124);
+            this.btnOpenCreateProductForm.Location = new System.Drawing.Point(374, 97);
             this.btnOpenCreateProductForm.Name = "btnOpenCreateProductForm";
             this.btnOpenCreateProductForm.Size = new System.Drawing.Size(105, 40);
             this.btnOpenCreateProductForm.TabIndex = 0;
@@ -45,7 +45,7 @@
             // 
             // btnOpenUpdateProductForm
             // 
-            this.btnOpenUpdateProductForm.Location = new System.Drawing.Point(408, 170);
+            this.btnOpenUpdateProductForm.Location = new System.Drawing.Point(374, 143);
             this.btnOpenUpdateProductForm.Name = "btnOpenUpdateProductForm";
             this.btnOpenUpdateProductForm.Size = new System.Drawing.Size(105, 40);
             this.btnOpenUpdateProductForm.TabIndex = 1;
@@ -55,7 +55,7 @@
             // 
             // btnDeleteProduct
             // 
-            this.btnDeleteProduct.Location = new System.Drawing.Point(408, 216);
+            this.btnDeleteProduct.Location = new System.Drawing.Point(374, 189);
             this.btnDeleteProduct.Name = "btnDeleteProduct";
             this.btnDeleteProduct.Size = new System.Drawing.Size(105, 40);
             this.btnDeleteProduct.TabIndex = 2;
@@ -67,7 +67,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(584, 361);
             this.Controls.Add(this.btnDeleteProduct);
             this.Controls.Add(this.btnOpenUpdateProductForm);
             this.Controls.Add(this.btnOpenCreateProductForm);
