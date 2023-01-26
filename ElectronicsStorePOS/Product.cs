@@ -53,7 +53,7 @@ namespace ElectronicsStorePOS
         /// <returns>The Product's name and price as a string</returns>
         public override string ToString()
         {
-            return $"{currProduct.Name} - {currProduct.Price}";
+            return $"{Name} - {Price}";
         }
     }
 }
