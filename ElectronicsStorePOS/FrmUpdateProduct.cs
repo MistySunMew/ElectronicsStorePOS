@@ -77,7 +77,7 @@ namespace ElectronicsStorePOS
                 p.Category = cbxProductCategory.Text;
                 p.SKU = txtProductSKU.Text;
 
-                ProductContext dbContext = new();
+                using ProductContext dbContext = new();
 
                 if (cbxProductCategory.Text == "Game")
                 {
