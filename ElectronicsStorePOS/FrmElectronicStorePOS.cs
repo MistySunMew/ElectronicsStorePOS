@@ -42,6 +42,10 @@ namespace ElectronicsStorePOS
             PopulateProductsLst();
         }
 
+        /**************
+         *** DELETE ***
+         **************/
+
         /// <summary>
         /// When the "Delete Product" button is clicked, 
         /// removes the selected product from the database
@@ -53,7 +57,7 @@ namespace ElectronicsStorePOS
 
         /**************
          *** SELECT ***
-         *************/
+         **************/
 
         /// <summary>
         /// When "Home" form is opened, displays all Products in db
