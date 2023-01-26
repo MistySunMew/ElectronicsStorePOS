@@ -123,6 +123,7 @@
             // cbxGameRating
             // 
             this.cbxGameRating.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxGameRating.Enabled = false;
             this.cbxGameRating.FormattingEnabled = true;
             this.cbxGameRating.Location = new System.Drawing.Point(237, 183);
             this.cbxGameRating.Name = "cbxGameRating";
@@ -137,6 +138,7 @@
             this.cbxProductCategory.Name = "cbxProductCategory";
             this.cbxProductCategory.Size = new System.Drawing.Size(182, 33);
             this.cbxProductCategory.TabIndex = 10;
+            this.cbxProductCategory.SelectedIndexChanged += new System.EventHandler(this.cbxProductCategory_SelectedIndexChanged);
             // 
             // txtProductSKU
             // 

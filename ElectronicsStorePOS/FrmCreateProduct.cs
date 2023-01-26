@@ -97,5 +97,18 @@ namespace ElectronicsStorePOS
             cbxProductCategory.SelectedItem = null;
 
         }
+
+        private void cbxProductCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbxProductCategory.Text == "Game")
+            {
+                cbxGameRating.Enabled = true;
+            }
+            else
+            {
+                cbxGameRating.SelectedItem = null;
+                cbxGameRating.Enabled = false;
+            }
+        }
     }
 }
