@@ -65,7 +65,10 @@ namespace ElectronicsStorePOS
             dbContext.SaveChanges();
 
             // Reset the list-box
-            PopulateProductsLst()
+            PopulateProductsLst();
+
+            // Display message to user
+            Validation.DisplayMessage("Product removed successfuly", "Product Removed");
         }
 
         /**************
