@@ -31,11 +31,12 @@
             this.btnOpenCreateProductForm = new System.Windows.Forms.Button();
             this.btnOpenUpdateProductForm = new System.Windows.Forms.Button();
             this.btnDeleteProduct = new System.Windows.Forms.Button();
+            this.lstProducts = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // btnOpenCreateProductForm
             // 
-            this.btnOpenCreateProductForm.Location = new System.Drawing.Point(374, 97);
+            this.btnOpenCreateProductForm.Location = new System.Drawing.Point(439, 28);
             this.btnOpenCreateProductForm.Name = "btnOpenCreateProductForm";
             this.btnOpenCreateProductForm.Size = new System.Drawing.Size(105, 40);
             this.btnOpenCreateProductForm.TabIndex = 0;
@@ -45,7 +46,7 @@
             // 
             // btnOpenUpdateProductForm
             // 
-            this.btnOpenUpdateProductForm.Location = new System.Drawing.Point(374, 143);
+            this.btnOpenUpdateProductForm.Location = new System.Drawing.Point(439, 116);
             this.btnOpenUpdateProductForm.Name = "btnOpenUpdateProductForm";
             this.btnOpenUpdateProductForm.Size = new System.Drawing.Size(105, 40);
             this.btnOpenUpdateProductForm.TabIndex = 1;
@@ -55,7 +56,7 @@
             // 
             // btnDeleteProduct
             // 
-            this.btnDeleteProduct.Location = new System.Drawing.Point(374, 189);
+            this.btnDeleteProduct.Location = new System.Drawing.Point(439, 204);
             this.btnDeleteProduct.Name = "btnDeleteProduct";
             this.btnDeleteProduct.Size = new System.Drawing.Size(105, 40);
             this.btnDeleteProduct.TabIndex = 2;
@@ -63,11 +64,21 @@
             this.btnDeleteProduct.UseVisualStyleBackColor = true;
             this.btnDeleteProduct.Click += new System.EventHandler(this.BtnDeleteProduct_Click);
             // 
+            // lstProducts
+            // 
+            this.lstProducts.FormattingEnabled = true;
+            this.lstProducts.ItemHeight = 15;
+            this.lstProducts.Location = new System.Drawing.Point(34, 28);
+            this.lstProducts.Name = "lstProducts";
+            this.lstProducts.Size = new System.Drawing.Size(145, 304);
+            this.lstProducts.TabIndex = 3;
+            // 
             // FrmElectronicStorePOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.lstProducts);
             this.Controls.Add(this.btnDeleteProduct);
             this.Controls.Add(this.btnOpenUpdateProductForm);
             this.Controls.Add(this.btnOpenCreateProductForm);
@@ -82,5 +93,6 @@
         private Button btnOpenCreateProductForm;
         private Button btnOpenUpdateProductForm;
         private Button btnDeleteProduct;
+        private ListBox lstProducts;
     }
 }
