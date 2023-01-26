@@ -51,18 +51,9 @@ namespace ElectronicsStorePOS
             throw new NotImplementedException();
         }
 
-        /// <summary>
-        /// When the "Cart" button is clicked, creates 
-        /// and displays an instance of the Cart form
-        /// </summary>
-        private void BtnOpenCartForm_Click(object sender, EventArgs e)
-        {
-            // Create new instance of form
-            FrmCart cartForm = new();
-
-            // Display it to the user
-            cartForm.ShowDialog();
-        }
+        /**************
+         *** SELECT ***
+         *************/
 
         /// <summary>
         /// When "Home" form is opened, displays all Products in db
@@ -93,6 +84,23 @@ namespace ElectronicsStorePOS
             }
         }
 
+        /************
+         *** CART ***
+         ************/
+
+        /// <summary>
+        /// When the "Cart" button is clicked, creates 
+        /// and displays an instance of the Cart form
+        /// </summary>
+        private void BtnOpenCartForm_Click(object sender, EventArgs e)
+        {
+            // Create new instance of form
+            FrmCart cartForm = new();
+
+            // Display it to the user
+            cartForm.ShowDialog();
+        }
+
         /// <summary>
         /// When called, gets and returns a list containing all Products in the db
         /// </summary>
@@ -115,15 +123,35 @@ namespace ElectronicsStorePOS
         List<Product> productCart = new();
 
         /// <summary>
-        /// When a product is selected, adds it to the cart
+        /// When the "Add To Cart" button is clicked, if a Product
+        /// is selected, adds it to the cart
         /// </summary>
-        private void LstProducts_SelectedIndexChanged(object sender, EventArgs e)
+        private void BtnAddToCart_Click(object sender, EventArgs e)
         {
-            // Get the selected product
-            Product selectedProduct = (Product) lstProducts.SelectedItem;
+            // Check if a Product has been selected
+            if(lstProducts.SelectedIndex != -1)
+            {
+                // Get the selected Product
+                Product selectedProduct = (Product)lstProducts.SelectedItem;
 
-            // Add it to the cart
-            productCart.Add(selectedProduct);
+                // Add it to the cart
+                productCart.Add(selectedProduct);
+
+                // Display message indicating successful operation
+                Validation.DisplayMessage($"{selectedProduct.Name} was added successfully to the cart.",
+                                           "Added To Cart");
+
+                // Reset the Product list
+                lstProducts.SelectedIndex = -1;
+            }
+
+            // Otherwise
+            else
+            {
+                // Display error
+                Validation.DisplayError("You must select a product to add to cart!", 
+                                        "Item Not Selected");
+            }
         }
     }
 }
