@@ -17,13 +17,13 @@ namespace ElectronicsStorePOS
         /// <summary>
         /// The Product's name
         /// </summary>
-        public string Name { get; set; }
+        public required string Name { get; set; }
 
         /// <summary>
         /// The sales price of the Product
         /// </summary>
         [Range(0, Double.MaxValue)]
-        public double Price { get; set; }
+        public required double Price { get; set; }
 
         /// <summary>
         /// The Product's description
@@ -38,11 +38,11 @@ namespace ElectronicsStorePOS
         /// <summary>
         /// The category the Product belongs in
         /// </summary>
-        public string Category { get; set; }
+        public required string Category { get; set; }
 
         /// <summary>
         /// The Product's Stock Keeping Unit
         /// </summary>
-        public string SKU { get; set; }
+        public required string SKU { get; set; }
     }
 }

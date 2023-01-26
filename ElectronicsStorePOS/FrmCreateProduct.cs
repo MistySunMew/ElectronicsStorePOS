@@ -59,14 +59,16 @@ namespace ElectronicsStorePOS
         /// <param name="e"></param>
         private void btnCreateProduct_Click(object sender, EventArgs e)
         {
-            Product newProduct = new();
+            Product newProduct = new() 
+            {
+                Name = txtProductName.Text,
+                Price = Convert.ToDouble(txtProductPrice.Text),
+                Desc = txtProductDesc.Text,
+                Category = cbxProductCategory.Text,
+                SKU = txtProductSKU.Text,
+            };
+            
             ProductContext dbContext = new();
-
-            newProduct.Name = txtProductName.Text;
-            newProduct.Price = Convert.ToDouble(txtProductPrice.Text);
-            newProduct.Desc = txtProductDesc.Text;
-            newProduct.Category = cbxProductCategory.Text;
-            newProduct.SKU = txtProductSKU.Text;
 
             if (cbxProductCategory.Text == "Game")
             {
