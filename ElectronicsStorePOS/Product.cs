@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -44,5 +45,15 @@ namespace ElectronicsStorePOS
         /// The Product's Stock Keeping Unit
         /// </summary>
         public required string SKU { get; set; }
+
+        /// <summary>
+        /// Returns a products name and price as a string 
+        /// to represent the object when displayed
+        /// </summary>
+        /// <returns>The Product's name and price as a string</returns>
+        public override string ToString()
+        {
+            return $"{currProduct.Name} - {currProduct.Price}";
+        }
     }
 }
