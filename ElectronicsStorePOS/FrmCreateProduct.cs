@@ -100,6 +100,11 @@ namespace ElectronicsStorePOS
 
         }
 
+        /// <summary>
+        /// Enables or disables cbxGameRating depending on what category is selected
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cbxProductCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbxProductCategory.Text == "Game")
@@ -113,6 +118,10 @@ namespace ElectronicsStorePOS
             }
         }
 
+        /// <summary>
+        /// Checks if all inputs are valid and gives user feedback if not implemented properly
+        /// </summary>
+        /// <returns>True if everything is valid</returns>
         public bool isValid()
         {
             if (!Validation.IsInputPresent(txtProductName))
