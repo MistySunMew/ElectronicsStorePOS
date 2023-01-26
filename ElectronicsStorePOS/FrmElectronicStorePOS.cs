@@ -1,3 +1,5 @@
+using System.Numerics;
+
 namespace ElectronicsStorePOS
 {
 	public partial class FrmElectronicStorePOS : Form
@@ -53,6 +55,21 @@ namespace ElectronicsStorePOS
 
             // Display it to the user
             cartForm.ShowDialog();
+        }
+
+        private void FrmElectronicStorePOS_Load(object sender, EventArgs e)
+        {
+            // Establish connection to db
+            using ProductContext dbContext = new();
+
+            // Get all products in db
+            List<Product> allProducts = dbContext.Products.ToList();
+
+            // Populate the Products list-box with all products in db
+            foreach (Product currProduct in allProducts)
+            {
+                lstProducts.Items.Add($"{currProduct.Name} - {currProduct.Price}");
+            }
         }
     }
 }

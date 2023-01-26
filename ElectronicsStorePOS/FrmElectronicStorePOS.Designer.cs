@@ -96,6 +96,7 @@
             this.Controls.Add(this.btnOpenCreateProductForm);
             this.Name = "FrmElectronicStorePOS";
             this.Text = "Electronic Store POS";
+            this.Load += new System.EventHandler(this.FrmElectronicStorePOS_Load);
             this.ResumeLayout(false);
 
 		}
