@@ -32,5 +32,14 @@ namespace ElectronicsStorePOS
             // Display it to the user
             updateProductForm.ShowDialog();
         }
+
+        /// <summary>
+        /// When the "Delete Product" button is clicked, 
+        /// removes the selected product from the database
+        /// </summary>
+        private void BtnDeleteProduct_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

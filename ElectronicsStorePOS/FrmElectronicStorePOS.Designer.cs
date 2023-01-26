@@ -30,6 +30,7 @@
 		{
             this.btnOpenCreateProductForm = new System.Windows.Forms.Button();
             this.btnOpenUpdateProductForm = new System.Windows.Forms.Button();
+            this.btnDeleteProduct = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnOpenCreateProductForm
@@ -52,11 +53,22 @@
             this.btnOpenUpdateProductForm.UseVisualStyleBackColor = true;
             this.btnOpenUpdateProductForm.Click += new System.EventHandler(this.BtnOpenUpdateProductForm_Click);
             // 
+            // btnDeleteProduct
+            // 
+            this.btnDeleteProduct.Location = new System.Drawing.Point(408, 216);
+            this.btnDeleteProduct.Name = "btnDeleteProduct";
+            this.btnDeleteProduct.Size = new System.Drawing.Size(105, 40);
+            this.btnDeleteProduct.TabIndex = 2;
+            this.btnDeleteProduct.Text = "Delete Product";
+            this.btnDeleteProduct.UseVisualStyleBackColor = true;
+            this.btnDeleteProduct.Click += new System.EventHandler(this.BtnDeleteProduct_Click);
+            // 
             // FrmElectronicStorePOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnDeleteProduct);
             this.Controls.Add(this.btnOpenUpdateProductForm);
             this.Controls.Add(this.btnOpenCreateProductForm);
             this.Name = "FrmElectronicStorePOS";
@@ -69,5 +81,6 @@
 
         private Button btnOpenCreateProductForm;
         private Button btnOpenUpdateProductForm;
+        private Button btnDeleteProduct;
     }
 }
