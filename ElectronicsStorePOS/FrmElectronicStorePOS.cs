@@ -153,5 +153,12 @@ namespace ElectronicsStorePOS
                                         "Item Not Selected");
             }
         }
+
+        private void lstProducts_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            btnAddToCart.Enabled = true;
+            btnDeleteProduct.Enabled = true;
+            btnOpenUpdateProductForm.Enabled = true;
+        }
     }
 }

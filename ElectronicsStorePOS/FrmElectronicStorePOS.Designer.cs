@@ -38,9 +38,10 @@
             // 
             // btnOpenCreateProductForm
             // 
-            this.btnOpenCreateProductForm.Location = new System.Drawing.Point(439, 28);
+            this.btnOpenCreateProductForm.Location = new System.Drawing.Point(502, 37);
+            this.btnOpenCreateProductForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOpenCreateProductForm.Name = "btnOpenCreateProductForm";
-            this.btnOpenCreateProductForm.Size = new System.Drawing.Size(105, 40);
+            this.btnOpenCreateProductForm.Size = new System.Drawing.Size(120, 53);
             this.btnOpenCreateProductForm.TabIndex = 0;
             this.btnOpenCreateProductForm.Text = "Create Product";
             this.btnOpenCreateProductForm.UseVisualStyleBackColor = true;
@@ -48,9 +49,11 @@
             // 
             // btnOpenUpdateProductForm
             // 
-            this.btnOpenUpdateProductForm.Location = new System.Drawing.Point(439, 94);
+            this.btnOpenUpdateProductForm.Enabled = false;
+            this.btnOpenUpdateProductForm.Location = new System.Drawing.Point(502, 125);
+            this.btnOpenUpdateProductForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOpenUpdateProductForm.Name = "btnOpenUpdateProductForm";
-            this.btnOpenUpdateProductForm.Size = new System.Drawing.Size(105, 40);
+            this.btnOpenUpdateProductForm.Size = new System.Drawing.Size(120, 53);
             this.btnOpenUpdateProductForm.TabIndex = 1;
             this.btnOpenUpdateProductForm.Text = "Update Product";
             this.btnOpenUpdateProductForm.UseVisualStyleBackColor = true;
@@ -58,9 +61,11 @@
             // 
             // btnDeleteProduct
             // 
-            this.btnDeleteProduct.Location = new System.Drawing.Point(439, 160);
+            this.btnDeleteProduct.Enabled = false;
+            this.btnDeleteProduct.Location = new System.Drawing.Point(502, 213);
+            this.btnDeleteProduct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDeleteProduct.Name = "btnDeleteProduct";
-            this.btnDeleteProduct.Size = new System.Drawing.Size(105, 40);
+            this.btnDeleteProduct.Size = new System.Drawing.Size(120, 53);
             this.btnDeleteProduct.TabIndex = 2;
             this.btnDeleteProduct.Text = "Delete Product";
             this.btnDeleteProduct.UseVisualStyleBackColor = true;
@@ -69,17 +74,20 @@
             // lstProducts
             // 
             this.lstProducts.FormattingEnabled = true;
-            this.lstProducts.ItemHeight = 15;
-            this.lstProducts.Location = new System.Drawing.Point(34, 28);
+            this.lstProducts.ItemHeight = 20;
+            this.lstProducts.Location = new System.Drawing.Point(39, 37);
+            this.lstProducts.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lstProducts.Name = "lstProducts";
-            this.lstProducts.Size = new System.Drawing.Size(273, 304);
+            this.lstProducts.Size = new System.Drawing.Size(311, 404);
             this.lstProducts.TabIndex = 3;
+            this.lstProducts.SelectedIndexChanged += new System.EventHandler(this.lstProducts_SelectedIndexChanged);
             // 
             // btnOpenCartForm
             // 
-            this.btnOpenCartForm.Location = new System.Drawing.Point(439, 292);
+            this.btnOpenCartForm.Location = new System.Drawing.Point(502, 389);
+            this.btnOpenCartForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOpenCartForm.Name = "btnOpenCartForm";
-            this.btnOpenCartForm.Size = new System.Drawing.Size(105, 40);
+            this.btnOpenCartForm.Size = new System.Drawing.Size(120, 53);
             this.btnOpenCartForm.TabIndex = 4;
             this.btnOpenCartForm.Text = "Go To Cart";
             this.btnOpenCartForm.UseVisualStyleBackColor = true;
@@ -87,9 +95,11 @@
             // 
             // btnAddToCart
             // 
-            this.btnAddToCart.Location = new System.Drawing.Point(439, 226);
+            this.btnAddToCart.Enabled = false;
+            this.btnAddToCart.Location = new System.Drawing.Point(502, 301);
+            this.btnAddToCart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddToCart.Name = "btnAddToCart";
-            this.btnAddToCart.Size = new System.Drawing.Size(105, 40);
+            this.btnAddToCart.Size = new System.Drawing.Size(120, 53);
             this.btnAddToCart.TabIndex = 5;
             this.btnAddToCart.Text = "Add To Cart";
             this.btnAddToCart.UseVisualStyleBackColor = true;
@@ -97,15 +107,16 @@
             // 
             // FrmElectronicStorePOS
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 361);
+            this.ClientSize = new System.Drawing.Size(667, 481);
             this.Controls.Add(this.btnAddToCart);
             this.Controls.Add(this.btnOpenCartForm);
             this.Controls.Add(this.lstProducts);
             this.Controls.Add(this.btnDeleteProduct);
             this.Controls.Add(this.btnOpenUpdateProductForm);
             this.Controls.Add(this.btnOpenCreateProductForm);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmElectronicStorePOS";
             this.Text = "Electronic Store POS";
             this.Load += new System.EventHandler(this.FrmElectronicStorePOS_Load);
