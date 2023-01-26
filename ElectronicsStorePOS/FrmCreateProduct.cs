@@ -69,7 +69,7 @@ namespace ElectronicsStorePOS
                     SKU = txtProductSKU.Text,
                 };
 
-                ProductContext dbContext = new();
+                using ProductContext dbContext = new();
 
                 if (cbxProductCategory.Text == "Game")
                 {
