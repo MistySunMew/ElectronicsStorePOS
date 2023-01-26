@@ -51,6 +51,10 @@ namespace ElectronicsStorePOS
             throw new NotImplementedException();
         }
 
+        /**************
+         *** SELECT ***
+         *************/
+
         /// <summary>
         /// When "Home" form is opened, displays all Products in db
         /// </summary>
