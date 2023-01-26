@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ElectronicsStorePOS
 {
-    internal class Product
+    public class Product
     {
         /// <summary>
         /// The Primary key identity column

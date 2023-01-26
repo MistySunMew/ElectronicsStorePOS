@@ -54,6 +54,7 @@
             this.btnReturnHome.TabIndex = 29;
             this.btnReturnHome.Text = "Return Home";
             this.btnReturnHome.UseVisualStyleBackColor = true;
+            this.btnReturnHome.Click += new System.EventHandler(this.btnReturnHome_Click);
             // 
             // btnClearForm
             // 
@@ -64,6 +65,7 @@
             this.btnClearForm.TabIndex = 28;
             this.btnClearForm.Text = "Clear Form";
             this.btnClearForm.UseVisualStyleBackColor = true;
+            this.btnClearForm.Click += new System.EventHandler(this.btnClearForm_Click);
             // 
             // btnUpdateProduct
             // 
@@ -74,6 +76,7 @@
             this.btnUpdateProduct.TabIndex = 27;
             this.btnUpdateProduct.Text = "Update Product";
             this.btnUpdateProduct.UseVisualStyleBackColor = true;
+            this.btnUpdateProduct.Click += new System.EventHandler(this.btnUpdateProduct_Click);
             // 
             // txtProductSKU
             // 
@@ -92,6 +95,7 @@
             this.cbxProductCategory.Name = "cbxProductCategory";
             this.cbxProductCategory.Size = new System.Drawing.Size(146, 28);
             this.cbxProductCategory.TabIndex = 25;
+            this.cbxProductCategory.SelectedIndexChanged += new System.EventHandler(this.cbxProductCategory_SelectedIndexChanged);
             // 
             // cbxGameRating
             // 
@@ -211,6 +215,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmUpdateProduct";
             this.Text = "Update Product";
+            this.Load += new System.EventHandler(this.FrmUpdateProduct_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

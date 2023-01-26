@@ -33,7 +33,7 @@ namespace ElectronicsStorePOS
         private void BtnOpenUpdateProductForm_Click(object sender, EventArgs e)
         {
             // Create new instance of form
-            FrmUpdateProduct updateProductForm = new();
+            FrmUpdateProduct updateProductForm = new((Product)lstProducts.SelectedItem);
 
             // Display it to the user
             updateProductForm.ShowDialog();
