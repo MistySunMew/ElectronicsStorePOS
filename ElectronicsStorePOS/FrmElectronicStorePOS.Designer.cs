@@ -73,6 +73,7 @@
             this.lstProducts.Name = "lstProducts";
             this.lstProducts.Size = new System.Drawing.Size(273, 304);
             this.lstProducts.TabIndex = 3;
+            this.lstProducts.SelectedIndexChanged += new System.EventHandler(this.LstProducts_SelectedIndexChanged);
             // 
             // btnOpenCartForm
             // 

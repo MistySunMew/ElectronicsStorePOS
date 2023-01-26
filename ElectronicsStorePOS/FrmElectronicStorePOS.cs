@@ -1,3 +1,4 @@
+using Microsoft.VisualBasic;
 using System.Numerics;
 
 namespace ElectronicsStorePOS
@@ -57,6 +58,9 @@ namespace ElectronicsStorePOS
             cartForm.ShowDialog();
         }
 
+        /// <summary>
+        /// When "Home" form is opened, displays all Products in db
+        /// </summary>
         private void FrmElectronicStorePOS_Load(object sender, EventArgs e)
         {
             // Establish connection to db
@@ -68,8 +72,26 @@ namespace ElectronicsStorePOS
             // Populate the Products list-box with all products in db
             foreach (Product currProduct in allProducts)
             {
-                lstProducts.Items.Add($"{currProduct.Name} - {currProduct.Price}");
+                // Display the Product's name and price
+                lstProducts.Items.Add(currProduct);
             }
+        }
+
+        /// <summary>
+        /// The Product cart
+        /// </summary>
+        List<Product> productCart = new();
+
+        /// <summary>
+        /// When a product is selected, adds it to the cart
+        /// </summary>
+        private void LstProducts_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Get the selected product
+            Product selectedProduct = (Product) lstProducts.SelectedItem;
+
+            // Add it to the cart
+            productCart.Add(selectedProduct);
         }
     }
 }
