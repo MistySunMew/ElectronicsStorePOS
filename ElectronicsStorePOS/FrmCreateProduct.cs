@@ -59,27 +59,29 @@ namespace ElectronicsStorePOS
         /// <param name="e"></param>
         private void btnCreateProduct_Click(object sender, EventArgs e)
         {
-            Product newProduct = new() 
-            {
-                Name = txtProductName.Text,
-                Price = Convert.ToDouble(txtProductPrice.Text),
-                Desc = txtProductDesc.Text,
-                Category = cbxProductCategory.Text,
-                SKU = txtProductSKU.Text,
-            };
-            
-            ProductContext dbContext = new();
+            if (isValid()) {
+                Product newProduct = new()
+                {
+                    Name = txtProductName.Text,
+                    Price = Convert.ToDouble(txtProductPrice.Text),
+                    Desc = txtProductDesc.Text,
+                    Category = cbxProductCategory.Text,
+                    SKU = txtProductSKU.Text,
+                };
 
-            if (cbxProductCategory.Text == "Game")
-            {
-                newProduct.Rating = cbxGameRating.Text;
+                ProductContext dbContext = new();
+
+                if (cbxProductCategory.Text == "Game")
+                {
+                    newProduct.Rating = cbxGameRating.Text;
+                }
+
+                dbContext.Products.Add(newProduct);
+                dbContext.SaveChanges();
+
+                MessageBox.Show("Added Product");
+                btnClearForm_Click(sender, e);
             }
-
-            dbContext.Products.Add(newProduct);
-            dbContext.SaveChanges();
-
-            MessageBox.Show("Added Product");
-            btnClearForm_Click(sender, e);
         }
 
         /// <summary>
@@ -108,6 +110,39 @@ namespace ElectronicsStorePOS
             {
                 cbxGameRating.SelectedItem = null;
                 cbxGameRating.Enabled = false;
+            }
+        }
+
+        public bool isValid()
+        {
+            if (!Validation.IsInputPresent(txtProductName))
+            {
+                Validation.DisplayMessage("Please Enter a Name", "Input Error");
+                return false;
+            }
+            else if (!Validation.IsNumber(txtProductPrice.Text))
+            {
+                Validation.DisplayMessage("Please Enter a valid price", "Input Error");
+                return false;
+            }
+            else if (!Validation.IsCategory(cbxProductCategory.Text))
+            {
+                Validation.DisplayMessage("Please Choose a Category", "Input Error");
+                return false;
+            }
+            else if (cbxProductCategory.Text == "Game" && !Validation.IsRating(cbxGameRating.Text)) 
+            {
+                Validation.DisplayMessage("Please Choose a Rating", "Input Error");
+                return false;
+            }
+            else if (!Validation.IsInputPresent(txtProductSKU))
+            {
+                Validation.DisplayMessage("Please Enter a SKU", "Input Error");
+                return false;
+            }
+            else
+            {
+                return true;
             }
         }
     }
