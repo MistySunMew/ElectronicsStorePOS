@@ -22,7 +22,7 @@ namespace ElectronicsStorePOS
             // Display it to the user
             createProductForm.ShowDialog();
 
-            // Reset Product list-box
+            // Reset Products list-box
             PopulateProductsLst();
         }
 
@@ -38,7 +38,7 @@ namespace ElectronicsStorePOS
             // Display it to the user
             updateProductForm.ShowDialog();
 
-            // Reset Product list-box
+            // Reset Products list-box
             PopulateProductsLst();
         }
 
@@ -82,21 +82,8 @@ namespace ElectronicsStorePOS
             // Clear the Products list-box
             lstProducts.Items.Clear();
 
-            // Re-populate the Products list-box
-            GetAllProducts();
-        }
-
-        /// <summary>
-        /// When called, gets all Products from the db and 
-        /// displays them in the Products list-box
-        /// </summary>
-        private void GetAllProducts()
-        {
-            // Establish connection to db
-            using ProductContext dbContext = new();
-
-            // Get all products in db
-            List<Product> allProducts = dbContext.Products.ToList();
+            // Get all Products in the db
+            List<Product> allProducts = GetAllProducts();
 
             // Populate the Products list-box with all products in db
             foreach (Product currProduct in allProducts)
@@ -104,6 +91,22 @@ namespace ElectronicsStorePOS
                 // Display the Product's name and price
                 lstProducts.Items.Add(currProduct);
             }
+        }
+
+        /// <summary>
+        /// When called, gets and returns a list containing all Products in the db
+        /// </summary>
+        /// <returns>A list containing all Products in the db</returns>
+        private List<Product> GetAllProducts()
+        {
+            // Establish connection to db
+            using ProductContext dbContext = new();
+
+            // Get all Products in db
+            List<Product> allProducts = dbContext.Products.ToList();
+
+            // Return the list
+            return allProducts;
         }
 
         /// <summary>
