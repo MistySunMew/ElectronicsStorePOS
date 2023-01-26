@@ -33,7 +33,7 @@ namespace ElectronicsStorePOS
         private void BtnOpenUpdateProductForm_Click(object sender, EventArgs e)
         {
             // Create new instance of form
-            FrmUpdateProduct updateProductForm = new((Product)lstProducts.SelectedItem);
+            FrmUpdateProduct updateProductForm = new((Product) lstProducts.SelectedItem);
 
             // Display it to the user
             updateProductForm.ShowDialog();
@@ -52,7 +52,11 @@ namespace ElectronicsStorePOS
         /// </summary>
         private void BtnDeleteProduct_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            // Establish connection to db
+            using ProductContext dbContext = new();
+
+            // Get the currently selected Product
+            Product selectedProduct = (Product)lstProducts.SelectedItem;
         }
 
         /**************
