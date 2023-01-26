@@ -48,7 +48,11 @@ namespace ElectronicsStorePOS
         /// </summary>
         private void BtnOpenCartForm_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            // Create new instance of form
+            FrmCart cartForm = new();
+
+            // Display it to the user
+            cartForm.ShowDialog();
         }
     }
 }

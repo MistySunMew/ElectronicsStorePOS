@@ -71,7 +71,7 @@
             this.lstProducts.ItemHeight = 15;
             this.lstProducts.Location = new System.Drawing.Point(34, 28);
             this.lstProducts.Name = "lstProducts";
-            this.lstProducts.Size = new System.Drawing.Size(145, 304);
+            this.lstProducts.Size = new System.Drawing.Size(273, 304);
             this.lstProducts.TabIndex = 3;
             // 
             // btnOpenCartForm
