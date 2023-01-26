@@ -33,7 +33,7 @@ namespace ElectronicsStorePOS
         private void BtnOpenUpdateProductForm_Click(object sender, EventArgs e)
         {
             // Create new instance of form
-            FrmUpdateProduct updateProductForm = new((Product)lstProducts.SelectedItem);
+            FrmUpdateProduct updateProductForm = new((Product) lstProducts.SelectedItem);
 
             // Display it to the user
             updateProductForm.ShowDialog();
@@ -42,18 +42,38 @@ namespace ElectronicsStorePOS
             PopulateProductsLst();
         }
 
+        /**************
+         *** DELETE ***
+         **************/
+
         /// <summary>
         /// When the "Delete Product" button is clicked, 
         /// removes the selected product from the database
         /// </summary>
         private void BtnDeleteProduct_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            // Establish connection to db
+            using ProductContext dbContext = new();
+
+            // Get the currently selected Product
+            Product selectedProduct = (Product)lstProducts.SelectedItem;
+
+            // Setup delete query
+            dbContext.Remove(selectedProduct);
+
+            // Push the query to db
+            dbContext.SaveChanges();
+
+            // Reset the list-box
+            PopulateProductsLst();
+
+            // Display message to user
+            Validation.DisplayMessage("Product removed successfuly", "Product Removed");
         }
 
         /**************
          *** SELECT ***
-         *************/
+         **************/
 
         /// <summary>
         /// When "Home" form is opened, displays all Products in db
