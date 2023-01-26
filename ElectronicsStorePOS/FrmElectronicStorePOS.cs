@@ -57,6 +57,11 @@ namespace ElectronicsStorePOS
 
             // Get the currently selected Product
             Product selectedProduct = (Product)lstProducts.SelectedItem;
+
+            dbContext.Remove(selectedProduct);
+
+            // Push the query to db
+            dbContext.SaveChanges();
         }
 
         /**************
