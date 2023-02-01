@@ -114,6 +114,7 @@
             this.Controls.Add(this.lstProductsInCart);
             this.Name = "FrmCart";
             this.Text = "FrmCart";
+            this.Load += new System.EventHandler(this.FrmCart_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
