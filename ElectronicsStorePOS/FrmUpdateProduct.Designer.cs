@@ -50,7 +50,7 @@
             this.btnReturnHome.Location = new System.Drawing.Point(329, 25);
             this.btnReturnHome.Margin = new System.Windows.Forms.Padding(2);
             this.btnReturnHome.Name = "btnReturnHome";
-            this.btnReturnHome.Size = new System.Drawing.Size(158, 59);
+            this.btnReturnHome.Size = new System.Drawing.Size(120, 53);
             this.btnReturnHome.TabIndex = 29;
             this.btnReturnHome.Text = "Return Home";
             this.btnReturnHome.UseVisualStyleBackColor = true;
@@ -61,7 +61,7 @@
             this.btnClearForm.Location = new System.Drawing.Point(182, 223);
             this.btnClearForm.Margin = new System.Windows.Forms.Padding(2);
             this.btnClearForm.Name = "btnClearForm";
-            this.btnClearForm.Size = new System.Drawing.Size(158, 59);
+            this.btnClearForm.Size = new System.Drawing.Size(120, 53);
             this.btnClearForm.TabIndex = 28;
             this.btnClearForm.Text = "Clear Form";
             this.btnClearForm.UseVisualStyleBackColor = true;
@@ -69,10 +69,10 @@
             // 
             // btnUpdateProduct
             // 
-            this.btnUpdateProduct.Location = new System.Drawing.Point(19, 223);
+            this.btnUpdateProduct.Location = new System.Drawing.Point(49, 223);
             this.btnUpdateProduct.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateProduct.Name = "btnUpdateProduct";
-            this.btnUpdateProduct.Size = new System.Drawing.Size(158, 59);
+            this.btnUpdateProduct.Size = new System.Drawing.Size(120, 53);
             this.btnUpdateProduct.TabIndex = 27;
             this.btnUpdateProduct.Text = "Update Product";
             this.btnUpdateProduct.UseVisualStyleBackColor = true;
