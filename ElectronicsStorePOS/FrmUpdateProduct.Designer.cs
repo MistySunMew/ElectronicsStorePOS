@@ -47,7 +47,7 @@
             // 
             // btnReturnHome
             // 
-            this.btnReturnHome.Location = new System.Drawing.Point(329, 25);
+            this.btnReturnHome.Location = new System.Drawing.Point(384, 25);
             this.btnReturnHome.Margin = new System.Windows.Forms.Padding(2);
             this.btnReturnHome.Name = "btnReturnHome";
             this.btnReturnHome.Size = new System.Drawing.Size(120, 53);
@@ -83,7 +83,7 @@
             this.txtProductSKU.Location = new System.Drawing.Point(185, 187);
             this.txtProductSKU.Margin = new System.Windows.Forms.Padding(2);
             this.txtProductSKU.Name = "txtProductSKU";
-            this.txtProductSKU.Size = new System.Drawing.Size(121, 27);
+            this.txtProductSKU.Size = new System.Drawing.Size(146, 27);
             this.txtProductSKU.TabIndex = 26;
             // 
             // cbxProductCategory
@@ -113,7 +113,7 @@
             this.txtProductDesc.Location = new System.Drawing.Point(185, 93);
             this.txtProductDesc.Margin = new System.Windows.Forms.Padding(2);
             this.txtProductDesc.Name = "txtProductDesc";
-            this.txtProductDesc.Size = new System.Drawing.Size(121, 27);
+            this.txtProductDesc.Size = new System.Drawing.Size(146, 27);
             this.txtProductDesc.TabIndex = 23;
             // 
             // txtProductPrice
@@ -121,7 +121,7 @@
             this.txtProductPrice.Location = new System.Drawing.Point(185, 59);
             this.txtProductPrice.Margin = new System.Windows.Forms.Padding(2);
             this.txtProductPrice.Name = "txtProductPrice";
-            this.txtProductPrice.Size = new System.Drawing.Size(121, 27);
+            this.txtProductPrice.Size = new System.Drawing.Size(146, 27);
             this.txtProductPrice.TabIndex = 22;
             // 
             // txtProductName
@@ -129,7 +129,7 @@
             this.txtProductName.Location = new System.Drawing.Point(185, 25);
             this.txtProductName.Margin = new System.Windows.Forms.Padding(2);
             this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(121, 27);
+            this.txtProductName.Size = new System.Drawing.Size(146, 27);
             this.txtProductName.TabIndex = 21;
             // 
             // label6

@@ -108,25 +108,25 @@
             // txtProductName
             // 
             this.txtProductName.Location = new System.Drawing.Point(190, 16);
-            this.txtProductName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtProductName.Margin = new System.Windows.Forms.Padding(2);
             this.txtProductName.Name = "txtProductName";
-            this.txtProductName.Size = new System.Drawing.Size(121, 27);
+            this.txtProductName.Size = new System.Drawing.Size(146, 27);
             this.txtProductName.TabIndex = 6;
             // 
             // txtProductPrice
             // 
             this.txtProductPrice.Location = new System.Drawing.Point(190, 50);
-            this.txtProductPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtProductPrice.Margin = new System.Windows.Forms.Padding(2);
             this.txtProductPrice.Name = "txtProductPrice";
-            this.txtProductPrice.Size = new System.Drawing.Size(121, 27);
+            this.txtProductPrice.Size = new System.Drawing.Size(146, 27);
             this.txtProductPrice.TabIndex = 7;
             // 
             // txtProductDesc
             // 
             this.txtProductDesc.Location = new System.Drawing.Point(190, 84);
-            this.txtProductDesc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtProductDesc.Margin = new System.Windows.Forms.Padding(2);
             this.txtProductDesc.Name = "txtProductDesc";
-            this.txtProductDesc.Size = new System.Drawing.Size(121, 27);
+            this.txtProductDesc.Size = new System.Drawing.Size(146, 27);
             this.txtProductDesc.TabIndex = 8;
             // 
             // cbxGameRating
@@ -135,7 +135,7 @@
             this.cbxGameRating.Enabled = false;
             this.cbxGameRating.FormattingEnabled = true;
             this.cbxGameRating.Location = new System.Drawing.Point(190, 146);
-            this.cbxGameRating.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxGameRating.Margin = new System.Windows.Forms.Padding(2);
             this.cbxGameRating.Name = "cbxGameRating";
             this.cbxGameRating.Size = new System.Drawing.Size(146, 28);
             this.cbxGameRating.TabIndex = 9;
@@ -145,7 +145,7 @@
             this.cbxProductCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxProductCategory.FormattingEnabled = true;
             this.cbxProductCategory.Location = new System.Drawing.Point(190, 116);
-            this.cbxProductCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxProductCategory.Margin = new System.Windows.Forms.Padding(2);
             this.cbxProductCategory.Name = "cbxProductCategory";
             this.cbxProductCategory.Size = new System.Drawing.Size(146, 28);
             this.cbxProductCategory.TabIndex = 10;
@@ -154,15 +154,15 @@
             // txtProductSKU
             // 
             this.txtProductSKU.Location = new System.Drawing.Point(190, 178);
-            this.txtProductSKU.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtProductSKU.Margin = new System.Windows.Forms.Padding(2);
             this.txtProductSKU.Name = "txtProductSKU";
-            this.txtProductSKU.Size = new System.Drawing.Size(121, 27);
+            this.txtProductSKU.Size = new System.Drawing.Size(146, 27);
             this.txtProductSKU.TabIndex = 11;
             // 
             // btnCreateProduct
             // 
             this.btnCreateProduct.Location = new System.Drawing.Point(24, 214);
-            this.btnCreateProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCreateProduct.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreateProduct.Name = "btnCreateProduct";
             this.btnCreateProduct.Size = new System.Drawing.Size(120, 53);
             this.btnCreateProduct.TabIndex = 12;
@@ -173,7 +173,7 @@
             // btnClearForm
             // 
             this.btnClearForm.Location = new System.Drawing.Point(187, 214);
-            this.btnClearForm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClearForm.Margin = new System.Windows.Forms.Padding(2);
             this.btnClearForm.Name = "btnClearForm";
             this.btnClearForm.Size = new System.Drawing.Size(120, 53);
             this.btnClearForm.TabIndex = 13;
@@ -183,8 +183,8 @@
             // 
             // btnReturnHome
             // 
-            this.btnReturnHome.Location = new System.Drawing.Point(334, 16);
-            this.btnReturnHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReturnHome.Location = new System.Drawing.Point(370, 21);
+            this.btnReturnHome.Margin = new System.Windows.Forms.Padding(2);
             this.btnReturnHome.Name = "btnReturnHome";
             this.btnReturnHome.Size = new System.Drawing.Size(120, 53);
             this.btnReturnHome.TabIndex = 14;

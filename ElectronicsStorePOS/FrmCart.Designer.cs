@@ -65,7 +65,7 @@
             this.txtSubTotal.Location = new System.Drawing.Point(503, 45);
             this.txtSubTotal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSubTotal.Name = "txtSubTotal";
-            this.txtSubTotal.Size = new System.Drawing.Size(114, 27);
+            this.txtSubTotal.Size = new System.Drawing.Size(146, 27);
             this.txtSubTotal.TabIndex = 6;
             this.txtSubTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -75,7 +75,7 @@
             this.txtTaxTotal.Location = new System.Drawing.Point(503, 84);
             this.txtTaxTotal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTaxTotal.Name = "txtTaxTotal";
-            this.txtTaxTotal.Size = new System.Drawing.Size(114, 27);
+            this.txtTaxTotal.Size = new System.Drawing.Size(146, 27);
             this.txtTaxTotal.TabIndex = 8;
             this.txtTaxTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -94,7 +94,7 @@
             this.txtTotal.Location = new System.Drawing.Point(503, 123);
             this.txtTotal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(114, 27);
+            this.txtTotal.Size = new System.Drawing.Size(146, 27);
             this.txtTotal.TabIndex = 10;
             this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
