@@ -129,5 +129,13 @@ namespace ElectronicsStorePOS
         {
             btnRemoveProductFromCart.Enabled = true;
         }
+
+        /// <summary>
+        /// When the "Return Home" button is clicked, closes the Cart Form
+        /// </summary>
+        private void BtnReturnHome_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

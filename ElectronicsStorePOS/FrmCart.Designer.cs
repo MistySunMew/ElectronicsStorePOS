@@ -36,6 +36,7 @@
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.lblTotal = new System.Windows.Forms.Label();
             this.btnRemoveProductFromCart = new System.Windows.Forms.Button();
+            this.btnReturnHome = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lstProductsInCart
@@ -113,11 +114,23 @@
             this.btnRemoveProductFromCart.UseVisualStyleBackColor = true;
             this.btnRemoveProductFromCart.Click += new System.EventHandler(this.BtnRemoveProductFromCart_Click);
             // 
+            // btnReturnHome
+            // 
+            this.btnReturnHome.Location = new System.Drawing.Point(435, 181);
+            this.btnReturnHome.Margin = new System.Windows.Forms.Padding(2);
+            this.btnReturnHome.Name = "btnReturnHome";
+            this.btnReturnHome.Size = new System.Drawing.Size(105, 40);
+            this.btnReturnHome.TabIndex = 30;
+            this.btnReturnHome.Text = "Return Home";
+            this.btnReturnHome.UseVisualStyleBackColor = true;
+            this.btnReturnHome.Click += new System.EventHandler(this.BtnReturnHome_Click);
+            // 
             // FrmCart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.btnReturnHome);
             this.Controls.Add(this.btnRemoveProductFromCart);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.lblTotal);
@@ -144,5 +157,6 @@
         private TextBox txtTotal;
         private Label lblTotal;
         private Button btnRemoveProductFromCart;
+        private Button btnReturnHome;
     }
 }
