@@ -86,5 +86,45 @@ namespace ElectronicsStorePOS
             txtTaxTotal.Text = $"{taxTotal:c}";
             txtTotal.Text = $"{total:c}";
         }
+
+        /// <summary>
+        /// When the "Remove Product" button is clicked, if a Product is selected, removes it from the cart
+        /// </summary>
+        private void BtnRemoveProductFromCart_Click(object sender, EventArgs e)
+        {
+            // Check if a Product has been selected
+            if (lstProductsInCart.SelectedIndex != -1)
+            {
+                // Get the selected Product
+                Product selectedProduct = (Product) lstProductsInCart.SelectedItem;
+
+                // Remove it from the cart
+                formCart.Remove(selectedProduct);
+
+                // Display message indicating successful operation
+                Validation.DisplayMessage($"{selectedProduct.Name} was removed successfully from the cart.",
+                                           "Product Removed");
+
+                // Reset the Products list
+                PopulateProductsInCartLst();
+                lstProductsInCart.SelectedIndex = -1;
+            }
+
+            // Otherwise
+            else
+            {
+                // Display error
+                Validation.DisplayError("You must select a product to remove from the cart!",
+                                        "Item Not Selected");
+            }
+        }
+
+        /// <summary>
+        /// When a Product is selected, enables the "Remove Product" button
+        /// </summary>
+        private void LstProductsInCart_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            btnRemoveProductFromCart.Enabled = true;
+        }
     }
 }
