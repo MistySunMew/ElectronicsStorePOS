@@ -111,6 +111,7 @@
             // 
             // btnRemoveProductFromCart
             // 
+            this.btnRemoveProductFromCart.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoveProductFromCart.Enabled = false;
             this.btnRemoveProductFromCart.Location = new System.Drawing.Point(497, 180);
             this.btnRemoveProductFromCart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -123,6 +124,7 @@
             // 
             // btnReturnHome
             // 
+            this.btnReturnHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReturnHome.Location = new System.Drawing.Point(367, 180);
             this.btnReturnHome.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnReturnHome.Name = "btnReturnHome";

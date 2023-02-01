@@ -182,6 +182,7 @@
             // 
             // btnReturnHome
             // 
+            this.btnReturnHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReturnHome.Location = new System.Drawing.Point(438, 108);
             this.btnReturnHome.Margin = new System.Windows.Forms.Padding(2);
             this.btnReturnHome.Name = "btnReturnHome";
@@ -193,6 +194,7 @@
             // 
             // btnClearForm
             // 
+            this.btnClearForm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClearForm.Location = new System.Drawing.Point(438, 186);
             this.btnClearForm.Margin = new System.Windows.Forms.Padding(2);
             this.btnClearForm.Name = "btnClearForm";
@@ -204,6 +206,7 @@
             // 
             // btnCreateProduct
             // 
+            this.btnCreateProduct.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCreateProduct.Location = new System.Drawing.Point(438, 30);
             this.btnCreateProduct.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreateProduct.Name = "btnCreateProduct";

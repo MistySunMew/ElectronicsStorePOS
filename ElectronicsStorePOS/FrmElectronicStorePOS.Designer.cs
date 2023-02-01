@@ -38,6 +38,7 @@
             // 
             // btnOpenCreateProductForm
             // 
+            this.btnOpenCreateProductForm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOpenCreateProductForm.Location = new System.Drawing.Point(400, 37);
             this.btnOpenCreateProductForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOpenCreateProductForm.Name = "btnOpenCreateProductForm";
@@ -49,6 +50,7 @@
             // 
             // btnOpenUpdateProductForm
             // 
+            this.btnOpenUpdateProductForm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOpenUpdateProductForm.Enabled = false;
             this.btnOpenUpdateProductForm.Location = new System.Drawing.Point(400, 124);
             this.btnOpenUpdateProductForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -61,6 +63,7 @@
             // 
             // btnDeleteProduct
             // 
+            this.btnDeleteProduct.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeleteProduct.Enabled = false;
             this.btnDeleteProduct.Location = new System.Drawing.Point(400, 211);
             this.btnDeleteProduct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -84,6 +87,7 @@
             // 
             // btnOpenCartForm
             // 
+            this.btnOpenCartForm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOpenCartForm.Location = new System.Drawing.Point(400, 385);
             this.btnOpenCartForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOpenCartForm.Name = "btnOpenCartForm";
@@ -95,6 +99,7 @@
             // 
             // btnAddToCart
             // 
+            this.btnAddToCart.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddToCart.Enabled = false;
             this.btnAddToCart.Location = new System.Drawing.Point(400, 298);
             this.btnAddToCart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
