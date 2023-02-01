@@ -114,8 +114,8 @@ namespace ElectronicsStorePOS
         /// </summary>
         private void BtnOpenCartForm_Click(object sender, EventArgs e)
         {
-            // Create new instance of form
-            FrmCart cartForm = new();
+            // Create new instance of form using the product cart
+            FrmCart cartForm = new(productCart);
 
             // Display it to the user
             cartForm.ShowDialog();
@@ -140,7 +140,7 @@ namespace ElectronicsStorePOS
         /// <summary>
         /// The Product cart
         /// </summary>
-        List<Product> productCart = new();
+        readonly List<Product> productCart = new();
 
         /// <summary>
         /// When the "Add To Cart" button is clicked, if a Product
