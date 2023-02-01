@@ -24,6 +24,9 @@ namespace ElectronicsStorePOS
 
             // Reset Products list-box
             PopulateProductsLst();
+
+            // Disables buttons
+            DisableButtons();
         }
 
         /// <summary>
@@ -40,6 +43,9 @@ namespace ElectronicsStorePOS
 
             // Reset Products list-box
             PopulateProductsLst();
+
+            // Disables buttons
+            DisableButtons();
         }
 
         /**************
@@ -69,6 +75,9 @@ namespace ElectronicsStorePOS
 
             // Display message to user
             Validation.DisplayMessage("Product removed successfuly", "Product Removed");
+
+            // Disables buttons
+            DisableButtons();
         }
 
         /**************
@@ -188,6 +197,13 @@ namespace ElectronicsStorePOS
             btnAddToCart.Enabled = true;
             btnDeleteProduct.Enabled = true;
             btnOpenUpdateProductForm.Enabled = true;
+        }
+
+        private void DisableButtons() 
+        {
+            btnAddToCart.Enabled = false;
+            btnDeleteProduct.Enabled = false;
+            btnOpenUpdateProductForm.Enabled = false;
         }
     }
 }
