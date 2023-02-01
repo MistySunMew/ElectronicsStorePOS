@@ -38,7 +38,7 @@
             // 
             // btnOpenCreateProductForm
             // 
-            this.btnOpenCreateProductForm.Location = new System.Drawing.Point(502, 37);
+            this.btnOpenCreateProductForm.Location = new System.Drawing.Point(400, 37);
             this.btnOpenCreateProductForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOpenCreateProductForm.Name = "btnOpenCreateProductForm";
             this.btnOpenCreateProductForm.Size = new System.Drawing.Size(120, 53);
@@ -50,7 +50,7 @@
             // btnOpenUpdateProductForm
             // 
             this.btnOpenUpdateProductForm.Enabled = false;
-            this.btnOpenUpdateProductForm.Location = new System.Drawing.Point(502, 125);
+            this.btnOpenUpdateProductForm.Location = new System.Drawing.Point(400, 124);
             this.btnOpenUpdateProductForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOpenUpdateProductForm.Name = "btnOpenUpdateProductForm";
             this.btnOpenUpdateProductForm.Size = new System.Drawing.Size(120, 53);
@@ -62,7 +62,7 @@
             // btnDeleteProduct
             // 
             this.btnDeleteProduct.Enabled = false;
-            this.btnDeleteProduct.Location = new System.Drawing.Point(502, 213);
+            this.btnDeleteProduct.Location = new System.Drawing.Point(400, 211);
             this.btnDeleteProduct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDeleteProduct.Name = "btnDeleteProduct";
             this.btnDeleteProduct.Size = new System.Drawing.Size(120, 53);
@@ -84,7 +84,7 @@
             // 
             // btnOpenCartForm
             // 
-            this.btnOpenCartForm.Location = new System.Drawing.Point(502, 389);
+            this.btnOpenCartForm.Location = new System.Drawing.Point(400, 385);
             this.btnOpenCartForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnOpenCartForm.Name = "btnOpenCartForm";
             this.btnOpenCartForm.Size = new System.Drawing.Size(120, 53);
@@ -96,7 +96,7 @@
             // btnAddToCart
             // 
             this.btnAddToCart.Enabled = false;
-            this.btnAddToCart.Location = new System.Drawing.Point(502, 301);
+            this.btnAddToCart.Location = new System.Drawing.Point(400, 298);
             this.btnAddToCart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddToCart.Name = "btnAddToCart";
             this.btnAddToCart.Size = new System.Drawing.Size(120, 53);
@@ -109,7 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(667, 481);
+            this.ClientSize = new System.Drawing.Size(554, 481);
             this.Controls.Add(this.btnAddToCart);
             this.Controls.Add(this.btnOpenCartForm);
             this.Controls.Add(this.lstProducts);
