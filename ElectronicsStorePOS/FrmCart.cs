@@ -111,6 +111,9 @@ namespace ElectronicsStorePOS
                 // Display message indicating successful operation
                 Validation.DisplayMessage($"{selectedProduct.Name} was removed successfully from the cart.",
                                            "Product Removed");
+
+                // Disable the "Remove Product" button
+                btnRemoveProductFromCart.Enabled = false;
             }
 
             // Otherwise
