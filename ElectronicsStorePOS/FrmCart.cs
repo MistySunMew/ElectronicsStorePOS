@@ -19,12 +19,12 @@ namespace ElectronicsStorePOS
         public FrmCart(List<Product> productCart)
         {
             // Clear the form's cart
-            formCart.Clear();
+            FrmCart.productCart.Clear();
 
             // Transfer all products in sent cart to form's cart 
             foreach (Product currProduct in productCart)
             {
-                formCart.Add(currProduct);
+                FrmCart.productCart.Add(currProduct);
             }
 
             InitializeComponent();
@@ -33,7 +33,7 @@ namespace ElectronicsStorePOS
         /// <summary>
         /// The Product cart
         /// </summary>
-        public static List<Product> formCart = new();
+        public static List<Product> productCart = new();
 
         private void FrmCart_Load(object sender, EventArgs e)
         { 
@@ -51,7 +51,7 @@ namespace ElectronicsStorePOS
             lstProductsInCart.Items.Clear();
 
             // Populate the Products list-box with all products in Cart
-            foreach (Product currProduct in formCart)
+            foreach (Product currProduct in productCart)
             {
                 // Display the Product's name and price
                 lstProductsInCart.Items.Add(currProduct);
@@ -68,7 +68,7 @@ namespace ElectronicsStorePOS
             double subtotal = 0;
 
             // Run through cart
-            foreach (Product currProduct in formCart)
+            foreach (Product currProduct in productCart)
             {
                 // Add the Product's price to subtotal
                 subtotal += currProduct.Price;
@@ -99,7 +99,7 @@ namespace ElectronicsStorePOS
                 Product selectedProduct = (Product) lstProductsInCart.SelectedItem;
 
                 // Remove it from the cart
-                formCart.Remove(selectedProduct);
+                productCart.Remove(selectedProduct);
 
                 // Reset the Products list
                 PopulateProductsInCartLst();
