@@ -140,7 +140,7 @@ namespace ElectronicsStorePOS
         /// <summary>
         /// The Product cart
         /// </summary>
-        List<Product> productCart = new();
+        readonly List<Product> productCart = new();
 
         /// <summary>
         /// When the "Add To Cart" button is clicked, if a Product
