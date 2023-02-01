@@ -133,7 +133,7 @@ namespace ElectronicsStorePOS
             productCart.Clear();
 
             // Transfer the content's of the form cart to the product cart
-            foreach (Product currProduct in FrmCart.formCart)
+            foreach (Product currProduct in FrmCart.productCart)
             {
                 productCart.Add(currProduct);
             }
