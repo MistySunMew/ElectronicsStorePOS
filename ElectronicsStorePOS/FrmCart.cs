@@ -33,7 +33,7 @@ namespace ElectronicsStorePOS
         /// <summary>
         /// The Product cart
         /// </summary>
-        private readonly List<Product> formCart = new();
+        public static List<Product> formCart = new();
 
         private void FrmCart_Load(object sender, EventArgs e)
         { 

@@ -119,6 +119,15 @@ namespace ElectronicsStorePOS
 
             // Display it to the user
             cartForm.ShowDialog();
+
+            // Reset the product cart
+            productCart.Clear();
+
+            // Transfer the content's of the form cart to the product cart
+            foreach (Product currProduct in FrmCart.formCart)
+            {
+                productCart.Add(currProduct);
+            }
         }
 
         /// <summary>
