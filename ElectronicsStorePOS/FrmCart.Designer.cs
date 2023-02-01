@@ -30,8 +30,8 @@
         {
             this.lstProductsInCart = new System.Windows.Forms.ListBox();
             this.lblSubtotal = new System.Windows.Forms.Label();
-            this.txtSubtotal = new System.Windows.Forms.TextBox();
-            this.txtTax = new System.Windows.Forms.TextBox();
+            this.txtSubTotal = new System.Windows.Forms.TextBox();
+            this.txtTaxTotal = new System.Windows.Forms.TextBox();
             this.lblTax = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.lblTotal = new System.Windows.Forms.Label();
@@ -55,23 +55,23 @@
             this.lblSubtotal.TabIndex = 5;
             this.lblSubtotal.Text = "Subtotal:";
             // 
-            // txtSubtotal
+            // txtSubTotal
             // 
-            this.txtSubtotal.Enabled = false;
-            this.txtSubtotal.Location = new System.Drawing.Point(440, 43);
-            this.txtSubtotal.Name = "txtSubtotal";
-            this.txtSubtotal.Size = new System.Drawing.Size(100, 23);
-            this.txtSubtotal.TabIndex = 6;
-            this.txtSubtotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSubTotal.Enabled = false;
+            this.txtSubTotal.Location = new System.Drawing.Point(440, 43);
+            this.txtSubTotal.Name = "txtSubTotal";
+            this.txtSubTotal.Size = new System.Drawing.Size(100, 23);
+            this.txtSubTotal.TabIndex = 6;
+            this.txtSubTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtTax
+            // txtTaxTotal
             // 
-            this.txtTax.Enabled = false;
-            this.txtTax.Location = new System.Drawing.Point(440, 72);
-            this.txtTax.Name = "txtTax";
-            this.txtTax.Size = new System.Drawing.Size(100, 23);
-            this.txtTax.TabIndex = 8;
-            this.txtTax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTaxTotal.Enabled = false;
+            this.txtTaxTotal.Location = new System.Drawing.Point(440, 72);
+            this.txtTaxTotal.Name = "txtTaxTotal";
+            this.txtTaxTotal.Size = new System.Drawing.Size(100, 23);
+            this.txtTaxTotal.TabIndex = 8;
+            this.txtTaxTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblTax
             // 
@@ -107,9 +107,9 @@
             this.ClientSize = new System.Drawing.Size(584, 361);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.lblTotal);
-            this.Controls.Add(this.txtTax);
+            this.Controls.Add(this.txtTaxTotal);
             this.Controls.Add(this.lblTax);
-            this.Controls.Add(this.txtSubtotal);
+            this.Controls.Add(this.txtSubTotal);
             this.Controls.Add(this.lblSubtotal);
             this.Controls.Add(this.lstProductsInCart);
             this.Name = "FrmCart";
@@ -124,8 +124,8 @@
 
         private ListBox lstProductsInCart;
         private Label lblSubtotal;
-        private TextBox txtSubtotal;
-        private TextBox txtTax;
+        private TextBox txtSubTotal;
+        private TextBox txtTaxTotal;
         private Label lblTax;
         private TextBox txtTotal;
         private Label lblTotal;

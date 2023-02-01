@@ -38,6 +38,7 @@ namespace ElectronicsStorePOS
         private void FrmCart_Load(object sender, EventArgs e)
         { 
             PopulateProductsInCartLst();
+            CalculateAndOutputTotals();
         }
 
         /// <summary>
@@ -55,6 +56,35 @@ namespace ElectronicsStorePOS
                 // Display the Product's name and price
                 lstProductsInCart.Items.Add(currProduct);
             }
+        }
+
+        /// <summary>
+        /// Calculates the subtotal, tax total, and total of all Products 
+        /// present in the cart, and output them to their corresponding textboxes
+        /// </summary>
+        public void CalculateAndOutputTotals()
+        {
+            // Calculate the subtotal of all Products in cart
+            double subtotal = 0;
+
+            // Run through cart
+            foreach (Product currProduct in formCart)
+            {
+                // Add the Product's price to subtotal
+                subtotal += currProduct.Price;
+            }
+
+            // Calculate the tax total
+            double TAX_RATE = .10;
+            double taxTotal = subtotal * TAX_RATE;
+
+            // Calculate the total of all Products in cart
+            double total = subtotal + taxTotal;
+
+            // Output all total's to form
+            txtSubTotal.Text = $"{subtotal:c}";
+            txtTaxTotal.Text = $"{taxTotal:c}";
+            txtTotal.Text = $"{total:c}";
         }
     }
 }
