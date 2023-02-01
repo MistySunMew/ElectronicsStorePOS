@@ -101,13 +101,16 @@ namespace ElectronicsStorePOS
                 // Remove it from the cart
                 formCart.Remove(selectedProduct);
 
-                // Display message indicating successful operation
-                Validation.DisplayMessage($"{selectedProduct.Name} was removed successfully from the cart.",
-                                           "Product Removed");
-
                 // Reset the Products list
                 PopulateProductsInCartLst();
                 lstProductsInCart.SelectedIndex = -1;
+
+                // Reset the total's
+                CalculateAndOutputTotals();
+
+                // Display message indicating successful operation
+                Validation.DisplayMessage($"{selectedProduct.Name} was removed successfully from the cart.",
+                                           "Product Removed");
             }
 
             // Otherwise
