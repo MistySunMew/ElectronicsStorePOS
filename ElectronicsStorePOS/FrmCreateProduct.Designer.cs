@@ -190,7 +190,7 @@
             this.btnReturnHome.TabIndex = 33;
             this.btnReturnHome.Text = "Return Home";
             this.btnReturnHome.UseVisualStyleBackColor = true;
-            this.btnReturnHome.Click += new System.EventHandler(this.btnReturnHome_Click);
+            this.btnReturnHome.Click += new System.EventHandler(this.BtnReturnHome_Click);
             // 
             // btnClearForm
             // 
@@ -202,7 +202,7 @@
             this.btnClearForm.TabIndex = 32;
             this.btnClearForm.Text = "Clear Form";
             this.btnClearForm.UseVisualStyleBackColor = true;
-            this.btnClearForm.Click += new System.EventHandler(this.btnClearForm_Click);
+            this.btnClearForm.Click += new System.EventHandler(this.BtnClearForm_Click);
             // 
             // btnCreateProduct
             // 
@@ -214,7 +214,7 @@
             this.btnCreateProduct.TabIndex = 31;
             this.btnCreateProduct.Text = "Create Product";
             this.btnCreateProduct.UseVisualStyleBackColor = true;
-            this.btnCreateProduct.Click += new System.EventHandler(this.btnCreateProduct_Click);
+            this.btnCreateProduct.Click += new System.EventHandler(this.BtnCreateProduct_Click);
             // 
             // FrmCreateProduct
             // 

@@ -20,8 +20,6 @@ namespace ElectronicsStorePOS
         /// <summary>
         /// Adds items to comboboxes
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void FrmCreateProduct_Load(object sender, EventArgs e)
         {
             cbxGameRating.Items.Add("E");
@@ -45,9 +43,7 @@ namespace ElectronicsStorePOS
         /// <summary>
         /// Closes the current form
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnReturnHome_Click(object sender, EventArgs e)
+        private void BtnReturnHome_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -55,11 +51,9 @@ namespace ElectronicsStorePOS
         /// <summary>
         /// Takes inputs from form and creates a new Product object that gets added to the database
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnCreateProduct_Click(object sender, EventArgs e)
+        private void BtnCreateProduct_Click(object sender, EventArgs e)
         {
-            if (isValid()) {
+            if (IsValid()) {
                 Product newProduct = new()
                 {
                     Name = txtProductName.Text,
@@ -80,16 +74,14 @@ namespace ElectronicsStorePOS
                 dbContext.SaveChanges();
 
                 MessageBox.Show("Added Product");
-                btnClearForm_Click(sender, e);
+                BtnClearForm_Click(sender, e);
             }
         }
 
         /// <summary>
         /// Clears the form
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnClearForm_Click(object sender, EventArgs e)
+        private void BtnClearForm_Click(object sender, EventArgs e)
         {
             txtProductDesc.Clear();
             txtProductName.Clear();
@@ -103,9 +95,7 @@ namespace ElectronicsStorePOS
         /// <summary>
         /// Enables or disables cbxGameRating depending on what category is selected
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void cbxProductCategory_SelectedIndexChanged(object sender, EventArgs e)
+        private void CbxProductCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbxProductCategory.Text == "Game")
             {
@@ -122,7 +112,7 @@ namespace ElectronicsStorePOS
         /// Checks if all inputs are valid and gives user feedback if not implemented properly
         /// </summary>
         /// <returns>True if everything is valid</returns>
-        public bool isValid()
+        public bool IsValid()
         {
             if (!Validation.IsInputPresent(txtProductName))
             {

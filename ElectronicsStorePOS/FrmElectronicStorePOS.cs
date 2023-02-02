@@ -192,7 +192,7 @@ namespace ElectronicsStorePOS
             }
         }
 
-        private void lstProducts_SelectedIndexChanged(object sender, EventArgs e)
+        private void LstProducts_SelectedIndexChanged(object sender, EventArgs e)
         {
             btnAddToCart.Enabled = true;
             btnDeleteProduct.Enabled = true;
