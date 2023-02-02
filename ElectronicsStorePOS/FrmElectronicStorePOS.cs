@@ -74,7 +74,8 @@ namespace ElectronicsStorePOS
             PopulateProductsLst();
 
             // Display message to user
-            Validation.DisplayMessage("Product removed successfuly", "Product Removed");
+            Validation.DisplayMessage($"{selectedProduct.Name} was deleted successfully", 
+                                       "Product Deleted");
 
             // Disables buttons
             DisableButtons();
@@ -176,8 +177,8 @@ namespace ElectronicsStorePOS
                 productCart.Add(selectedProduct);
 
                 // Display message indicating successful operation
-                Validation.DisplayMessage($"{selectedProduct.Name} was added successfully to the cart.",
-                                           "Added To Cart");
+                Validation.DisplayMessage($"{selectedProduct.Name} was added successfully to the cart",
+                                           "Product Added To Cart");
 
                 // Reset the Product list
                 lstProducts.SelectedIndex = -1;
@@ -187,7 +188,7 @@ namespace ElectronicsStorePOS
             else
             {
                 // Display error
-                Validation.DisplayError("You must select a product to add to cart!", 
+                Validation.DisplayError("Please select a product to add to the cart", 
                                         "Item Not Selected");
             }
         }
