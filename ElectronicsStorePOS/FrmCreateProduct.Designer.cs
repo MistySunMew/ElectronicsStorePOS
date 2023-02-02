@@ -126,7 +126,7 @@
             this.cbxProductCategory.Name = "cbxProductCategory";
             this.cbxProductCategory.Size = new System.Drawing.Size(128, 23);
             this.cbxProductCategory.TabIndex = 25;
-            this.cbxProductCategory.SelectedIndexChanged += new System.EventHandler(this.cbxProductCategory_SelectedIndexChanged);
+            this.cbxProductCategory.SelectedIndexChanged += new System.EventHandler(this.CbxProductCategory_SelectedIndexChanged);
             // 
             // label5
             // 
