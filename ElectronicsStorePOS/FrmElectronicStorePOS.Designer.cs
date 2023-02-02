@@ -44,7 +44,7 @@
             this.btnOpenCreateProductForm.Name = "btnOpenCreateProductForm";
             this.btnOpenCreateProductForm.Size = new System.Drawing.Size(120, 53);
             this.btnOpenCreateProductForm.TabIndex = 0;
-            this.btnOpenCreateProductForm.Text = "Create Product";
+            this.btnOpenCreateProductForm.Text = "Create \r\nProduct";
             this.btnOpenCreateProductForm.UseVisualStyleBackColor = true;
             this.btnOpenCreateProductForm.Click += new System.EventHandler(this.BtnOpenCreateProductForm_Click);
             // 
@@ -70,7 +70,7 @@
             this.btnDeleteProduct.Name = "btnDeleteProduct";
             this.btnDeleteProduct.Size = new System.Drawing.Size(120, 53);
             this.btnDeleteProduct.TabIndex = 2;
-            this.btnDeleteProduct.Text = "Delete Product";
+            this.btnDeleteProduct.Text = "Delete \r\nProduct";
             this.btnDeleteProduct.UseVisualStyleBackColor = true;
             this.btnDeleteProduct.Click += new System.EventHandler(this.BtnDeleteProduct_Click);
             // 
@@ -93,7 +93,7 @@
             this.btnOpenCartForm.Name = "btnOpenCartForm";
             this.btnOpenCartForm.Size = new System.Drawing.Size(120, 53);
             this.btnOpenCartForm.TabIndex = 4;
-            this.btnOpenCartForm.Text = "Go To Cart";
+            this.btnOpenCartForm.Text = "Go To \r\nCart";
             this.btnOpenCartForm.UseVisualStyleBackColor = true;
             this.btnOpenCartForm.Click += new System.EventHandler(this.BtnOpenCartForm_Click);
             // 
@@ -106,7 +106,7 @@
             this.btnAddToCart.Name = "btnAddToCart";
             this.btnAddToCart.Size = new System.Drawing.Size(120, 53);
             this.btnAddToCart.TabIndex = 5;
-            this.btnAddToCart.Text = "Add To Cart";
+            this.btnAddToCart.Text = "Add To \r\nCart";
             this.btnAddToCart.UseVisualStyleBackColor = true;
             this.btnAddToCart.Click += new System.EventHandler(this.BtnAddToCart_Click);
             // 
