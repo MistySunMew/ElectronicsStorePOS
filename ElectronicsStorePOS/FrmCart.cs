@@ -109,8 +109,8 @@ namespace ElectronicsStorePOS
                 CalculateAndOutputTotals();
 
                 // Display message indicating successful operation
-                Validation.DisplayMessage($"{selectedProduct.Name} was removed successfully from the cart.",
-                                           "Product Removed");
+                Validation.DisplayMessage($"{selectedProduct.Name} was removed successfully from the cart",
+                                           "Product Removed From Cart");
 
                 // Disable the "Remove Product" button
                 btnRemoveProductFromCart.Enabled = false;
@@ -120,7 +120,7 @@ namespace ElectronicsStorePOS
             else
             {
                 // Display error
-                Validation.DisplayError("You must select a product to remove from the cart!",
+                Validation.DisplayError("Please select a product to remove from the cart",
                                         "Item Not Selected");
             }
         }

@@ -73,7 +73,9 @@ namespace ElectronicsStorePOS
                 dbContext.Products.Add(newProduct);
                 dbContext.SaveChanges();
 
-                MessageBox.Show("Added Product");
+                // Display message indicating successful operation
+                Validation.DisplayMessage($"{newProduct.Name} was created successfully",
+                                           "Product Created");
                 BtnClearForm_Click(sender, e);
             }
         }
@@ -116,27 +118,27 @@ namespace ElectronicsStorePOS
         {
             if (!Validation.IsInputPresent(txtProductName))
             {
-                Validation.DisplayMessage("Please Enter a Name", "Input Error");
+                Validation.DisplayMessage("Please enter a Name", "Input Error");
                 return false;
             }
             else if (!Validation.IsNumber(txtProductPrice.Text))
             {
-                Validation.DisplayMessage("Please Enter a valid price", "Input Error");
+                Validation.DisplayMessage("Please enter a valid price", "Input Error");
                 return false;
             }
             else if (!Validation.IsCategory(cbxProductCategory.Text))
             {
-                Validation.DisplayMessage("Please Choose a Category", "Input Error");
+                Validation.DisplayMessage("Please choose a Category", "Input Error");
                 return false;
             }
             else if (cbxProductCategory.Text == "Game" && !Validation.IsRating(cbxGameRating.Text)) 
             {
-                Validation.DisplayMessage("Please Choose a Rating", "Input Error");
+                Validation.DisplayMessage("Please choose a Rating", "Input Error");
                 return false;
             }
             else if (!Validation.IsInputPresent(txtProductSKU))
             {
-                Validation.DisplayMessage("Please Enter a SKU", "Input Error");
+                Validation.DisplayMessage("Please enter a SKU", "Input Error");
                 return false;
             }
             else

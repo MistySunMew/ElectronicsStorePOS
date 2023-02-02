@@ -44,6 +44,7 @@
             this.btnReturnHome = new System.Windows.Forms.Button();
             this.btnClearForm = new System.Windows.Forms.Button();
             this.btnCreateProduct = new System.Windows.Forms.Button();
+            this.cbxStepTwo = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -219,11 +220,23 @@
             this.btnCreateProduct.UseVisualStyleBackColor = true;
             this.btnCreateProduct.Click += new System.EventHandler(this.BtnCreateProduct_Click);
             // 
+            // cbxStepTwo
+            // 
+            this.cbxStepTwo.AutoSize = true;
+            this.cbxStepTwo.Enabled = false;
+            this.cbxStepTwo.Location = new System.Drawing.Point(428, 186);
+            this.cbxStepTwo.Name = "cbxStepTwo";
+            this.cbxStepTwo.Size = new System.Drawing.Size(15, 14);
+            this.cbxStepTwo.TabIndex = 35;
+            this.cbxStepTwo.UseVisualStyleBackColor = true;
+            this.cbxStepTwo.Visible = false;
+            // 
             // FrmCreateProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(502, 208);
+            this.Controls.Add(this.cbxStepTwo);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnReturnHome);
             this.Controls.Add(this.btnClearForm);
@@ -234,6 +247,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -255,5 +269,6 @@
         private Button btnReturnHome;
         private Button btnClearForm;
         private Button btnCreateProduct;
+        private CheckBox cbxStepTwo;
     }
 }
