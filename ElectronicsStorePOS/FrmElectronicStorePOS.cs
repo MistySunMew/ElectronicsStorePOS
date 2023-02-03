@@ -138,6 +138,8 @@ namespace ElectronicsStorePOS
             {
                 productCart.Add(currProduct);
             }
+
+            DisableButtons();
         }
 
         /// <summary>
@@ -182,6 +184,8 @@ namespace ElectronicsStorePOS
 
                 // Reset the Product list
                 lstProducts.SelectedIndex = -1;
+
+                DisableButtons();
             }
 
             // Otherwise
@@ -195,9 +199,12 @@ namespace ElectronicsStorePOS
 
         private void LstProducts_SelectedIndexChanged(object sender, EventArgs e)
         {
-            btnAddToCart.Enabled = true;
-            btnDeleteProduct.Enabled = true;
-            btnOpenUpdateProductForm.Enabled = true;
+            if (lstProducts.SelectedIndex != -1)
+            {
+                btnAddToCart.Enabled = true;
+                btnDeleteProduct.Enabled = true;
+                btnOpenUpdateProductForm.Enabled = true;
+            }
         }
 
         private void DisableButtons() 
