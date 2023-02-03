@@ -54,8 +54,8 @@ namespace ElectronicsStorePOS
         /// <returns></returns>
         public static bool IsNumber(string input)
         {
-            double number;
-            if (double.TryParse(input, out number))
+            double _;
+            if (double.TryParse(input, out _))
             {
                 return true;
             }
