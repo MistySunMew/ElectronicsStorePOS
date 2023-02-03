@@ -191,7 +191,7 @@
             this.btnReturnHome.Name = "btnReturnHome";
             this.btnReturnHome.Size = new System.Drawing.Size(120, 53);
             this.btnReturnHome.TabIndex = 33;
-            this.btnReturnHome.Text = "Return Home";
+            this.btnReturnHome.Text = "Return \r\nHome";
             this.btnReturnHome.UseVisualStyleBackColor = true;
             this.btnReturnHome.Click += new System.EventHandler(this.BtnReturnHome_Click);
             // 
@@ -203,7 +203,7 @@
             this.btnClearForm.Name = "btnClearForm";
             this.btnClearForm.Size = new System.Drawing.Size(120, 53);
             this.btnClearForm.TabIndex = 32;
-            this.btnClearForm.Text = "Clear Form";
+            this.btnClearForm.Text = "Clear \r\nForm";
             this.btnClearForm.UseVisualStyleBackColor = true;
             this.btnClearForm.Click += new System.EventHandler(this.BtnClearForm_Click);
             // 
@@ -215,7 +215,7 @@
             this.btnCreateProduct.Name = "btnCreateProduct";
             this.btnCreateProduct.Size = new System.Drawing.Size(120, 53);
             this.btnCreateProduct.TabIndex = 31;
-            this.btnCreateProduct.Text = "Create Product";
+            this.btnCreateProduct.Text = "Create \r\nProduct";
             this.btnCreateProduct.UseVisualStyleBackColor = true;
             this.btnCreateProduct.Click += new System.EventHandler(this.BtnCreateProduct_Click);
             // 
@@ -234,6 +234,7 @@
             // switch1
             // 
             this.switch1.AutoSize = true;
+            this.switch1.Enabled = false;
             this.switch1.Location = new System.Drawing.Point(438, 243);
             this.switch1.MinimumSize = new System.Drawing.Size(45, 22);
             this.switch1.Name = "switch1";
@@ -245,6 +246,7 @@
             this.switch1.TabIndex = 36;
             this.switch1.UseVisualStyleBackColor = true;
             this.switch1.Visible = false;
+            this.switch1.CheckedChanged += new System.EventHandler(this.switch1_CheckedChanged);
             // 
             // FrmCreateProduct
             // 

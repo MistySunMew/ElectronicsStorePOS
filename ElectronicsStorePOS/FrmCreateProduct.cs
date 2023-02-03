@@ -37,7 +37,8 @@ namespace ElectronicsStorePOS
             cbxProductCategory.Items.Add("Display");
             cbxProductCategory.Items.Add("Software");
             cbxProductCategory.Items.Add("Other");
-            
+
+            clearClicked = 0;
         }
 
         /// <summary>
@@ -53,6 +54,7 @@ namespace ElectronicsStorePOS
         /// </summary>
         private void BtnCreateProduct_Click(object sender, EventArgs e)
         {
+            clearClicked = 0;
             if (IsValid()) {
                 Product newProduct = new()
                 {
@@ -85,13 +87,25 @@ namespace ElectronicsStorePOS
         /// </summary>
         private void BtnClearForm_Click(object sender, EventArgs e)
         {
+            clearClicked++;
             txtProductDesc.Clear();
             txtProductName.Clear();
             txtProductPrice.Clear();
             txtProductSKU.Clear();
             cbxGameRating.SelectedItem = null;
             cbxProductCategory.SelectedItem = null;
-
+            if (clearClicked == 3) 
+            {
+                switch1.Enabled = true;
+                switch1.Visible = true;
+            }
+            else if (clearClicked > 3)
+            {
+                cbxStepTwo.Enabled = false;
+                cbxStepTwo.Visible = false;
+                switch1.Enabled = false;
+                switch1.Visible = false;
+            }
         }
 
         /// <summary>
@@ -99,6 +113,7 @@ namespace ElectronicsStorePOS
         /// </summary>
         private void CbxProductCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
+            clearClicked = 0;
             if (cbxProductCategory.Text == "Game")
             {
                 cbxGameRating.Enabled = true;
@@ -144,6 +159,21 @@ namespace ElectronicsStorePOS
             else
             {
                 return true;
+            }
+        }
+
+        private int clearClicked;
+        private void switch1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (switch1.Checked)
+            {
+                cbxStepTwo.Enabled = true;
+                cbxStepTwo.Visible = true;
+            }
+            else 
+            {
+                cbxStepTwo.Enabled = false;
+                cbxStepTwo.Visible = false;
             }
         }
     }
