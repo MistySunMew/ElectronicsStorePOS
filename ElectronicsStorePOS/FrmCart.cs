@@ -130,7 +130,10 @@ namespace ElectronicsStorePOS
         /// </summary>
         private void LstProductsInCart_SelectedIndexChanged(object sender, EventArgs e)
         {
-            btnRemoveProductFromCart.Enabled = true;
+            if (lstProductsInCart.SelectedIndex != -1)
+            {
+                btnRemoveProductFromCart.Enabled = true;
+            }
         }
 
         /// <summary>
