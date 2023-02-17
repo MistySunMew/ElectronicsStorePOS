@@ -72,25 +72,52 @@ namespace ElectronicsStorePOS
             );
 
             modelBuilder.Entity<ProductRelation>().HasData(
-                new ProductRelation { Product1ID = 1, Product2ID = 2, RelationRating = 5},
+                new ProductRelation { Product1ID = 1, Product2ID = 2, RelationRating = 4},
+                new ProductRelation { Product1ID = 1, Product2ID = 15, RelationRating = 3},
                 new ProductRelation { Product1ID = 1, Product2ID = 35, RelationRating = 5},
-                new ProductRelation { Product1ID = 1, Product2ID = 35, RelationRating = 5},
-                new ProductRelation { Product1ID = 1, Product2ID = 37, RelationRating = 3},
+                new ProductRelation { Product1ID = 1, Product2ID = 37, RelationRating = 4},
+                new ProductRelation { Product1ID = 1, Product2ID = 5, RelationRating = 4},
+                new ProductRelation { Product1ID = 1, Product2ID = 6, RelationRating = 5},
+                new ProductRelation { Product1ID = 1, Product2ID = 11, RelationRating = 5},
+
+                new ProductRelation { Product1ID = 2, Product2ID = 35, RelationRating = 4},
                 new ProductRelation { Product1ID = 2, Product2ID = 37, RelationRating = 3},
-                new ProductRelation { Product1ID = 3, Product2ID = 1, RelationRating = 5},
-                new ProductRelation { Product1ID = 3, Product2ID = 2, RelationRating = 5},
+                new ProductRelation { Product1ID = 2, Product2ID = 6, RelationRating = 5},
+                new ProductRelation { Product1ID = 2, Product2ID = 4, RelationRating = 5},
+                new ProductRelation { Product1ID = 2, Product2ID = 9, RelationRating = 3},
+                new ProductRelation { Product1ID = 2, Product2ID = 10, RelationRating = 5},
+                new ProductRelation { Product1ID = 2, Product2ID = 12, RelationRating = 4},
+
+                new ProductRelation { Product1ID = 1, Product2ID = 3, RelationRating = 5},
+                new ProductRelation { Product1ID = 2, Product2ID = 3, RelationRating = 5},
+                new ProductRelation { Product1ID = 1, Product2ID = 7, RelationRating = 3},
+                new ProductRelation { Product1ID = 2, Product2ID = 7, RelationRating = 4},
+
                 new ProductRelation { Product1ID = 3, Product2ID = 6, RelationRating = 4},
-                new ProductRelation { Product1ID = 5, Product2ID = 1, RelationRating = 4},
-                new ProductRelation { Product1ID = 5, Product2ID = 2, RelationRating = 4},
-                new ProductRelation { Product1ID = 6, Product2ID = 1, RelationRating = 5},
-                new ProductRelation { Product1ID = 6, Product2ID = 2, RelationRating = 5},
+                new ProductRelation { Product1ID = 5, Product2ID = 9, RelationRating = 4},
+                new ProductRelation { Product1ID = 11, Product2ID = 10, RelationRating = 3},
+
                 new ProductRelation { Product1ID = 42, Product2ID = 41, RelationRating = 5},
                 new ProductRelation { Product1ID = 42, Product2ID = 40, RelationRating = 2},
                 new ProductRelation { Product1ID = 42, Product2ID = 43, RelationRating = 3},
-                new ProductRelation { Product1ID = 37, Product2ID = 42, RelationRating = 3},
+                new ProductRelation { Product1ID = 42, Product2ID = 37, RelationRating = 3},
+                
+                new ProductRelation { Product1ID = 43, Product2ID = 40, RelationRating = 5},
+
                 new ProductRelation { Product1ID = 37, Product2ID = 33, RelationRating = 4},
+                new ProductRelation { Product1ID = 37, Product2ID = 17, RelationRating = 5},
                 new ProductRelation { Product1ID = 37, Product2ID = 18, RelationRating = 4},
-                new ProductRelation { Product1ID = 37, Product2ID = 19, RelationRating = 4}
+                new ProductRelation { Product1ID = 37, Product2ID = 19, RelationRating = 4},
+
+                new ProductRelation { Product1ID = 38, Product2ID = 16, RelationRating = 4},
+                new ProductRelation { Product1ID = 38, Product2ID = 20, RelationRating = 5},
+                new ProductRelation { Product1ID = 38, Product2ID = 21, RelationRating = 5},
+
+                new ProductRelation { Product1ID = 18, Product2ID = 19, RelationRating = 4},
+                new ProductRelation { Product1ID = 20, Product2ID = 21, RelationRating = 5},
+                new ProductRelation { Product1ID = 22, Product2ID = 23, RelationRating = 5},
+
+                new ProductRelation { Product1ID = 32, Product2ID = 34, RelationRating = 3}
             );
         }
     }
