@@ -72,8 +72,25 @@ namespace ElectronicsStorePOS
             );
 
             modelBuilder.Entity<ProductRelation>().HasData(
-                new ProductRelation { Product1ID = 1, Product2ID = 2, RelationRating = 5}
-                new ProductRelation { Product1ID = , Product2ID = , RelationRating = }
+                new ProductRelation { Product1ID = 1, Product2ID = 2, RelationRating = 5},
+                new ProductRelation { Product1ID = 1, Product2ID = 35, RelationRating = 5},
+                new ProductRelation { Product1ID = 1, Product2ID = 35, RelationRating = 5},
+                new ProductRelation { Product1ID = 1, Product2ID = 37, RelationRating = 3},
+                new ProductRelation { Product1ID = 2, Product2ID = 37, RelationRating = 3},
+                new ProductRelation { Product1ID = 3, Product2ID = 1, RelationRating = 5},
+                new ProductRelation { Product1ID = 3, Product2ID = 2, RelationRating = 5},
+                new ProductRelation { Product1ID = 3, Product2ID = 6, RelationRating = 4},
+                new ProductRelation { Product1ID = 5, Product2ID = 1, RelationRating = 4},
+                new ProductRelation { Product1ID = 5, Product2ID = 2, RelationRating = 4},
+                new ProductRelation { Product1ID = 6, Product2ID = 1, RelationRating = 5},
+                new ProductRelation { Product1ID = 6, Product2ID = 2, RelationRating = 5},
+                new ProductRelation { Product1ID = 42, Product2ID = 41, RelationRating = 5},
+                new ProductRelation { Product1ID = 42, Product2ID = 40, RelationRating = 2},
+                new ProductRelation { Product1ID = 42, Product2ID = 43, RelationRating = 3},
+                new ProductRelation { Product1ID = 37, Product2ID = 42, RelationRating = 3},
+                new ProductRelation { Product1ID = 37, Product2ID = 33, RelationRating = 4},
+                new ProductRelation { Product1ID = 37, Product2ID = 18, RelationRating = 4},
+                new ProductRelation { Product1ID = 37, Product2ID = 19, RelationRating = 4}
             );
         }
     }
