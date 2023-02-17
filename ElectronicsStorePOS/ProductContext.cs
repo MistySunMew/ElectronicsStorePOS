@@ -70,6 +70,11 @@ namespace ElectronicsStorePOS
                 new Product { ProductID = 42, Category = "Software", Name = "Windows 11 Home", Price = 139.00, SKU = "6498482" },
                 new Product { ProductID = 43, Category = "Software", Name = "Adobe Acrobat Standard", Price = 358.99, SKU = "6434506" }
             );
+
+            modelBuilder.Entity<ProductRelation>().HasData(
+                new ProductRelation { Product1ID = 1, Product2ID = 2, RelationRating = 5}
+                new ProductRelation { Product1ID = , Product2ID = , RelationRating = }
+            );
         }
     }
 }
