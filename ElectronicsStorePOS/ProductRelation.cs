@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -10,17 +11,18 @@ namespace ElectronicsStorePOS
     /// <summary>
     /// Represent's a relation between two Products
     /// </summary>
+    [PrimaryKey("Product1ID", "Product2ID")]
     public class ProductRelation
     {
         /// <summary>
-        /// The first individual Product being sold
+        /// The first individual Product's ID
         /// </summary>
-        public Product Product1 { get; set; }
+        public int Product1ID { get; set; }
 
         /// <summary>
-        /// The second individual Product being sold
+        /// The second individual Product's ID
         /// </summary>
-        public Product Product2 { get; set; }
+        public int Product2ID { get; set; }
 
         /// <summary>
         /// The relation "rating" of two Products;
