@@ -26,7 +26,7 @@ namespace ElectronicsStorePOS
         /// <summary>
         /// The sales price of the Product
         /// </summary>
-        [Range(0, Double.MaxValue)]
+        [Range(0, double.MaxValue)]
         public required double Price { get; set; }
 
         /// <summary>
