@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace ElectronicsStorePOS
 {
+    /// <summary>
+    /// Represent's a product currently being sold
+    /// </summary>
     public class Product
     {
         /// <summary>
