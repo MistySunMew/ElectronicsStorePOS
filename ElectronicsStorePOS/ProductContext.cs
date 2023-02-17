@@ -104,7 +104,6 @@ namespace ElectronicsStorePOS
                 new ProductRelation { Product1ID = 40, Product2ID = 43, RelationRating = 5},
 
                 new ProductRelation { Product1ID = 28, Product2ID = 41, RelationRating = 5},
-                new ProductRelation { Product1ID = 28, Product2ID = 41, RelationRating = 5},
                 new ProductRelation { Product1ID = 29, Product2ID = 40, RelationRating = 5},
                 new ProductRelation { Product1ID = 29, Product2ID = 37, RelationRating = 5},
 
