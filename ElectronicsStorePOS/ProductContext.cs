@@ -19,6 +19,8 @@ namespace ElectronicsStorePOS
         }
 
         public DbSet<Product> Products { get; set; }
+        
+        public DbSet<ProductRelation> ProductRelations { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) 
         {
