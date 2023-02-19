@@ -1,4 +1,6 @@
-﻿namespace ElectronicsStorePOS
+﻿using ElectronicsStorePOS.Models;
+
+namespace ElectronicsStorePOS
 {
     partial class FrmCreateProduct
     {
