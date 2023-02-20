@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCreateProduct));
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.txtProductSKU = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
@@ -307,6 +308,7 @@
 			this.Controls.Add(this.btnReturnHome);
 			this.Controls.Add(this.btnClearForm);
 			this.Controls.Add(this.btnCreateProduct);
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.Name = "FrmCreateProduct";
 			this.Text = "Create a Product";
