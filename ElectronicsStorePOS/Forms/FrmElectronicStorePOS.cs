@@ -1,9 +1,11 @@
+using ElectronicsStorePOS.Data;
+using ElectronicsStorePOS.Models;
 using Microsoft.VisualBasic;
 using System.Numerics;
 
 namespace ElectronicsStorePOS
 {
-	public partial class FrmElectronicStorePOS : Form
+    public partial class FrmElectronicStorePOS : Form
 	{
 		public FrmElectronicStorePOS()
 		{

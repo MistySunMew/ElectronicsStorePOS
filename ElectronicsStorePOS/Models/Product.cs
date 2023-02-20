@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ElectronicsStorePOS
+namespace ElectronicsStorePOS.Models
 {
     /// <summary>
     /// Represent's a product currently being sold
@@ -33,7 +33,7 @@ namespace ElectronicsStorePOS
         /// The Product's description
         /// </summary>
         public string? Desc { get; set; }
-        
+
         /// <summary>
         /// The Product's ESRB rating
         /// </summary>

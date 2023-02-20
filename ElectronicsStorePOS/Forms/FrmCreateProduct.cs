@@ -7,23 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ElectronicsStorePOS.Data;
+using ElectronicsStorePOS.Models;
 
 namespace ElectronicsStorePOS
 {
-    public partial class FrmUpdateProduct : Form
+    public partial class FrmCreateProduct : Form
     {
-        public FrmUpdateProduct(Product p)
+        public FrmCreateProduct()
         {
-            this.p = p;
             InitializeComponent();
         }
-
-        private Product p;
 
         /// <summary>
         /// Adds items to comboboxes
         /// </summary>
-        private void FrmUpdateProduct_Load(object sender, EventArgs e)
+        private void FrmCreateProduct_Load(object sender, EventArgs e)
         {
             cbxGameRating.Items.Add("E");
             cbxGameRating.Items.Add("E10+");
@@ -41,14 +40,8 @@ namespace ElectronicsStorePOS
             cbxProductCategory.Items.Add("Software");
             cbxProductCategory.Items.Add("Other");
 
-            txtProductName.Text = p.Name;
-            txtProductPrice.Text = p.Price.ToString();
-            txtProductDesc.Text = p.Desc;
-            txtProductSKU.Text = p.SKU;
-            cbxGameRating.Text = p.Rating;
-            cbxProductCategory.Text = p.Category;
+            clearClicked = 0;
         }
-
 
         /// <summary>
         /// Closes the current form
@@ -57,33 +50,36 @@ namespace ElectronicsStorePOS
         {
             Close();
         }
-        
+
         /// <summary>
-        /// Takes inputs from form and updates the current Product object that gets updated in the database
+        /// Takes inputs from form and creates a new Product object that gets added to the database
         /// </summary>
-        private void BtnUpdateProduct_Click(object sender, EventArgs e)
+        private void BtnCreateProduct_Click(object sender, EventArgs e)
         {
-            if (IsValid())
-            {
-                p.Name = txtProductName.Text;
-                p.Price = Convert.ToDouble(txtProductPrice.Text);
-                p.Desc = txtProductDesc.Text;
-                p.Category = cbxProductCategory.Text;
-                p.SKU = txtProductSKU.Text;
+            clearClicked = 0;
+            if (IsValid()) {
+                Product newProduct = new()
+                {
+                    Name = txtProductName.Text,
+                    Price = Convert.ToDouble(txtProductPrice.Text),
+                    Desc = txtProductDesc.Text,
+                    Category = cbxProductCategory.Text,
+                    SKU = txtProductSKU.Text,
+                };
 
                 using ProductContext dbContext = new();
 
                 if (cbxProductCategory.Text == "Game")
                 {
-                    p.Rating = cbxGameRating.Text;
+                    newProduct.Rating = cbxGameRating.Text;
                 }
 
-                dbContext.Update(p);
+                dbContext.Products.Add(newProduct);
                 dbContext.SaveChanges();
 
                 // Display message indicating successful operation
-                Validation.DisplayMessage($"{p.Name} was updated successfully",
-                                           "Product Updated");
+                Validation.DisplayMessage($"{newProduct.Name} was created successfully",
+                                           "Product Created");
                 BtnClearForm_Click(sender, e);
             }
         }
@@ -93,12 +89,25 @@ namespace ElectronicsStorePOS
         /// </summary>
         private void BtnClearForm_Click(object sender, EventArgs e)
         {
+            clearClicked++;
             txtProductDesc.Clear();
             txtProductName.Clear();
             txtProductPrice.Clear();
             txtProductSKU.Clear();
             cbxGameRating.SelectedItem = null;
             cbxProductCategory.SelectedItem = null;
+            if (clearClicked == 3) 
+            {
+                switch1.Enabled = true;
+                switch1.Visible = true;
+            }
+            else if (clearClicked > 3)
+            {
+                cbxStepTwo.Enabled = false;
+                cbxStepTwo.Visible = false;
+                switch1.Enabled = false;
+                switch1.Visible = false;
+            }
         }
 
         /// <summary>
@@ -106,6 +115,7 @@ namespace ElectronicsStorePOS
         /// </summary>
         private void CbxProductCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
+            clearClicked = 0;
             if (cbxProductCategory.Text == "Game")
             {
                 cbxGameRating.Enabled = true;
@@ -138,7 +148,7 @@ namespace ElectronicsStorePOS
                 Validation.DisplayMessage("Please choose a Category", "Input Error");
                 return false;
             }
-            else if (cbxProductCategory.Text == "Game" && !Validation.IsRating(cbxGameRating.Text))
+            else if (cbxProductCategory.Text == "Game" && !Validation.IsRating(cbxGameRating.Text)) 
             {
                 Validation.DisplayMessage("Please choose a Rating", "Input Error");
                 return false;
@@ -151,6 +161,21 @@ namespace ElectronicsStorePOS
             else
             {
                 return true;
+            }
+        }
+
+        private int clearClicked;
+        private void switch1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (switch1.Checked)
+            {
+                cbxStepTwo.Enabled = true;
+                cbxStepTwo.Visible = true;
+            }
+            else 
+            {
+                cbxStepTwo.Enabled = false;
+                cbxStepTwo.Visible = false;
             }
         }
     }

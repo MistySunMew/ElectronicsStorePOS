@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ElectronicsStorePOS
+namespace ElectronicsStorePOS.Models
 {
     /// <summary>
     /// Represent's a relation between two Products
