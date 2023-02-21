@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ElectronicsStorePOS.Data;
 using ElectronicsStorePOS.Models;
 
 namespace ElectronicsStorePOS
@@ -16,25 +17,36 @@ namespace ElectronicsStorePOS
         /// <summary>
         /// Creates a cart form with the given product list
         /// </summary>
-        /// <param name="productCart"></param>
+        /// <param name="productCart">The product cart from the main form</param>
         public FrmCart(List<Product> productCart)
         {
             // Clear the form's cart
-            FrmCart.productCart.Clear();
+            frmCartProductCart.Clear();
 
-            // Transfer all products in sent cart to form's cart 
+            // Transfer all products from sent cart to form's cart 
             foreach (Product currProduct in productCart)
             {
-                FrmCart.productCart.Add(currProduct);
+                // Establish connection to db
+                using ProductContext dbContext = new();
+
+                // Check if the current product still exists in the db
+                Product currProductInDb = dbContext.Products.Find(currProduct.ProductID);
+
+                // If the current product is in the database
+                if(currProductInDb != null)
+                {
+                    // Add the product's most updated version to the cart form's cart
+                    frmCartProductCart.Add(currProductInDb);
+                }
             }
 
             InitializeComponent();
         }
 
         /// <summary>
-        /// The Product cart
+        /// The cart form's version of the Product cart
         /// </summary>
-        public static List<Product> productCart = new();
+        public static List<Product> frmCartProductCart = new();
 
         private void FrmCart_Load(object sender, EventArgs e)
         { 
@@ -52,7 +64,7 @@ namespace ElectronicsStorePOS
             lstProductsInCart.Items.Clear();
 
             // Populate the Products list-box with all products in Cart
-            foreach (Product currProduct in productCart)
+            foreach (Product currProduct in frmCartProductCart)
             {
                 // Display the Product's name and price
                 lstProductsInCart.Items.Add(currProduct);
@@ -69,7 +81,7 @@ namespace ElectronicsStorePOS
             double subtotal = 0;
 
             // Run through cart
-            foreach (Product currProduct in productCart)
+            foreach (Product currProduct in frmCartProductCart)
             {
                 // Add the Product's price to subtotal
                 subtotal += currProduct.Price;
@@ -100,7 +112,7 @@ namespace ElectronicsStorePOS
                 Product selectedProduct = (Product) lstProductsInCart.SelectedItem;
 
                 // Remove it from the cart
-                productCart.Remove(selectedProduct);
+                frmCartProductCart.Remove(selectedProduct);
 
                 // Reset the Products list
                 PopulateProductsInCartLst();

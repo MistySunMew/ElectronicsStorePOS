@@ -116,34 +116,6 @@ namespace ElectronicsStorePOS
             }
         }
 
-        /************
-         *** CART ***
-         ************/
-
-        /// <summary>
-        /// When the "Cart" button is clicked, creates 
-        /// and displays an instance of the Cart form
-        /// </summary>
-        private void BtnOpenCartForm_Click(object sender, EventArgs e)
-        {
-            // Create new instance of form using the product cart
-            FrmCart cartForm = new(productCart);
-
-            // Display it to the user
-            cartForm.ShowDialog();
-
-            // Reset the product cart
-            productCart.Clear();
-
-            // Transfer the content's of the form cart to the product cart
-            foreach (Product currProduct in FrmCart.productCart)
-            {
-                productCart.Add(currProduct);
-            }
-
-            DisableButtons();
-        }
-
         /// <summary>
         /// When called, gets and returns a list containing all Products in the db
         /// </summary>
@@ -160,10 +132,38 @@ namespace ElectronicsStorePOS
             return allProducts;
         }
 
+        /************
+         *** CART ***
+         ************/
+
         /// <summary>
-        /// The Product cart
+        /// When the "Cart" button is clicked, creates 
+        /// and displays an instance of the Cart form
         /// </summary>
-        readonly List<Product> productCart = new();
+        private void BtnOpenCartForm_Click(object sender, EventArgs e)
+        {
+            // Create new instance of form using the product cart
+            FrmCart cartForm = new(frmMainProductCart);
+
+            // Display it to the user
+            cartForm.ShowDialog();
+
+            // Reset the main form's product cart
+            frmMainProductCart.Clear();
+
+            // Transfer the contents of the cart form's cart to the main form's cart
+            foreach (Product currProduct in FrmCart.frmCartProductCart)
+            {
+                frmMainProductCart.Add(currProduct);
+            }
+
+            DisableButtons();
+        }
+
+        /// <summary>
+        /// The main form's version of the Product cart
+        /// </summary>
+        readonly List<Product> frmMainProductCart = new();
 
         /// <summary>
         /// When the "Add To Cart" button is clicked, if a Product
@@ -178,7 +178,7 @@ namespace ElectronicsStorePOS
                 Product selectedProduct = (Product)lstProducts.SelectedItem;
 
                 // Add it to the cart
-                productCart.Add(selectedProduct);
+                frmMainProductCart.Add(selectedProduct);
 
                 // Display message indicating successful operation
                 Validation.DisplayMessage($"{selectedProduct.Name} was added successfully to the cart",
@@ -199,6 +199,9 @@ namespace ElectronicsStorePOS
             }
         }
 
+        /// <summary>
+        /// If a Product has been selected, enables all Product modification buttons
+        /// </summary>
         private void LstProducts_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lstProducts.SelectedIndex != -1)
@@ -209,6 +212,9 @@ namespace ElectronicsStorePOS
             }
         }
 
+        /// <summary>
+        /// Disables all main form button's that require a Product to be selected
+        /// </summary>
         private void DisableButtons() 
         {
             btnAddToCart.Enabled = false;
