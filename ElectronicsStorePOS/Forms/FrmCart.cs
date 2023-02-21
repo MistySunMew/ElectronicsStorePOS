@@ -20,21 +20,21 @@ namespace ElectronicsStorePOS
         public FrmCart(List<Product> productCart)
         {
             // Clear the form's cart
-            FrmCart.productCart.Clear();
+            FrmCart.frmCartProductCart.Clear();
 
             // Transfer all products in sent cart to form's cart 
             foreach (Product currProduct in productCart)
             {
-                FrmCart.productCart.Add(currProduct);
+                FrmCart.frmCartProductCart.Add(currProduct);
             }
 
             InitializeComponent();
         }
 
         /// <summary>
-        /// The Product cart
+        /// The cart form's version of the Product cart
         /// </summary>
-        public static List<Product> productCart = new();
+        public static List<Product> frmCartProductCart = new();
 
         private void FrmCart_Load(object sender, EventArgs e)
         { 
@@ -52,7 +52,7 @@ namespace ElectronicsStorePOS
             lstProductsInCart.Items.Clear();
 
             // Populate the Products list-box with all products in Cart
-            foreach (Product currProduct in productCart)
+            foreach (Product currProduct in frmCartProductCart)
             {
                 // Display the Product's name and price
                 lstProductsInCart.Items.Add(currProduct);
@@ -69,7 +69,7 @@ namespace ElectronicsStorePOS
             double subtotal = 0;
 
             // Run through cart
-            foreach (Product currProduct in productCart)
+            foreach (Product currProduct in frmCartProductCart)
             {
                 // Add the Product's price to subtotal
                 subtotal += currProduct.Price;
@@ -100,7 +100,7 @@ namespace ElectronicsStorePOS
                 Product selectedProduct = (Product) lstProductsInCart.SelectedItem;
 
                 // Remove it from the cart
-                productCart.Remove(selectedProduct);
+                frmCartProductCart.Remove(selectedProduct);
 
                 // Reset the Products list
                 PopulateProductsInCartLst();
