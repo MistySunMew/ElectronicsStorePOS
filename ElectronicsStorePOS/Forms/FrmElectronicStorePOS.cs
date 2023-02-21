@@ -116,6 +116,22 @@ namespace ElectronicsStorePOS
             }
         }
 
+        /// <summary>
+        /// When called, gets and returns a list containing all Products in the db
+        /// </summary>
+        /// <returns>A list containing all Products in the db</returns>
+        private List<Product> GetAllProducts()
+        {
+            // Establish connection to db
+            using ProductContext dbContext = new();
+
+            // Get all Products in db
+            List<Product> allProducts = dbContext.Products.ToList();
+
+            // Return the list
+            return allProducts;
+        }
+
         /************
          *** CART ***
          ************/
@@ -142,22 +158,6 @@ namespace ElectronicsStorePOS
             }
 
             DisableButtons();
-        }
-
-        /// <summary>
-        /// When called, gets and returns a list containing all Products in the db
-        /// </summary>
-        /// <returns>A list containing all Products in the db</returns>
-        private List<Product> GetAllProducts()
-        {
-            // Establish connection to db
-            using ProductContext dbContext = new();
-
-            // Get all Products in db
-            List<Product> allProducts = dbContext.Products.ToList();
-
-            // Return the list
-            return allProducts;
         }
 
         /// <summary>
