@@ -178,5 +178,29 @@ namespace ElectronicsStorePOS
                 cbxStepTwo.Visible = false;
             }
         }
-    }
+
+		private void cbxStepTwo_CheckedChanged(object sender, EventArgs e)
+		{
+            this.Size = new Size(Size.Width, Size.Height + 300);
+            txtNonsense.Visible = true;
+		}
+
+		private void txtNonsense_Click(object sender, EventArgs e)
+		{
+			this.Size = new Size(Size.Width, Size.Height + 300);
+            btnQuit.Visible = true;
+            btnNewAll.Visible = true;
+		}
+
+		private void btnQuit_Click(object sender, EventArgs e)
+		{
+            Close();
+		}
+
+		private void btnNewAll_Click(object sender, EventArgs e)
+		{
+            FrmTest frmTest = new();
+            frmTest.Show();
+		}
+	}
 }

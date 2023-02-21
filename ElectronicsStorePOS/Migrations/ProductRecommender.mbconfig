@@ -1,0 +1,50 @@
+﻿{
+  "Scenario": "Recommendation",
+  "DataSource": {
+    "Type": "SQL",
+    "Version": 1,
+    "ColumnProperties": [
+      {
+        "ColumnName": "col0",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 3
+      },
+      {
+        "ColumnName": "col1",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 3
+      },
+      {
+        "ColumnName": "col2",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 3
+      }
+    ],
+    "ConnectionString": "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=ElectronicsStoreProducts;Integrated Security=True",
+    "CommandString": "SELECT CAST([col0] as REAL), CAST([col1] as REAL), CAST([col2] as REAL) FROM [dbo].[ProductRelations]",
+    "DatabaseName": "ElectronicsStoreProducts",
+    "SelectedTableDbo": "dbo",
+    "TableName": "ProductRelations"
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "Type": "TrainingConfig",
+  "Version": 3,
+  "TrainingOption": {
+    "Version": 0,
+    "Type": "RecommendationTrainingOption",
+    "TrainingTime": 60,
+    "Seed": 0
+  }
+}
