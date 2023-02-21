@@ -20,12 +20,12 @@ namespace ElectronicsStorePOS
         public FrmCart(List<Product> productCart)
         {
             // Clear the form's cart
-            FrmCart.frmCartProductCart.Clear();
+            frmCartProductCart.Clear();
 
             // Transfer all products in sent cart to form's cart 
             foreach (Product currProduct in productCart)
             {
-                FrmCart.frmCartProductCart.Add(currProduct);
+                frmCartProductCart.Add(currProduct);
             }
 
             InitializeComponent();

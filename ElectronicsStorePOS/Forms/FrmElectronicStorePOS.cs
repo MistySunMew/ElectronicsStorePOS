@@ -132,10 +132,10 @@ namespace ElectronicsStorePOS
             // Display it to the user
             cartForm.ShowDialog();
 
-            // Reset the product cart
+            // Reset the main form's product cart
             frmMainProductCart.Clear();
 
-            // Transfer the content's of the form cart to the product cart
+            // Transfer the contents of the cart form's cart to the main form's cart
             foreach (Product currProduct in FrmCart.frmCartProductCart)
             {
                 frmMainProductCart.Add(currProduct);
@@ -199,6 +199,9 @@ namespace ElectronicsStorePOS
             }
         }
 
+        /// <summary>
+        /// If a Product has been selected, enables all Product modification buttons
+        /// </summary>
         private void LstProducts_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lstProducts.SelectedIndex != -1)
@@ -209,6 +212,9 @@ namespace ElectronicsStorePOS
             }
         }
 
+        /// <summary>
+        /// Disables all main form button's that require a Product to be selected
+        /// </summary>
         private void DisableButtons() 
         {
             btnAddToCart.Enabled = false;
