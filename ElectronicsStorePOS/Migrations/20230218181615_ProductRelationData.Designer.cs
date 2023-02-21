@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ElectronicsStorePOS.Migrations
 {
-    [DbContext(typeof(ProductContext))]
+    [DbContext(typeof(Data.ProductContext))]
     [Migration("20230218181615_ProductRelationData")]
     partial class ProductRelationData
     {
