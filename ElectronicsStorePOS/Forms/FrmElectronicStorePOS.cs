@@ -1,4 +1,5 @@
 using ElectronicsStorePOS.Data;
+using ElectronicsStorePOS.Forms;
 using ElectronicsStorePOS.Models;
 using Microsoft.VisualBasic;
 using System.Numerics;
@@ -220,6 +221,12 @@ namespace ElectronicsStorePOS
             btnAddToCart.Enabled = false;
             btnDeleteProduct.Enabled = false;
             btnOpenUpdateProductForm.Enabled = false;
+        }
+
+        private void llbCredits_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmCredits creditsForm = new();
+            creditsForm.ShowDialog();
         }
     }
 }
