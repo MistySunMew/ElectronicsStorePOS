@@ -221,5 +221,11 @@ namespace ElectronicsStorePOS
             btnDeleteProduct.Enabled = false;
             btnOpenUpdateProductForm.Enabled = false;
         }
+
+        private void llbCredits_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmCredis creditsForm = new();
+            creditsForm.ShowDialog();
+        }
     }
 }
