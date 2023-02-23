@@ -1,4 +1,5 @@
 using ElectronicsStorePOS.Data;
+using ElectronicsStorePOS.Forms;
 using ElectronicsStorePOS.Models;
 using Microsoft.VisualBasic;
 using System.Numerics;
@@ -224,7 +225,7 @@ namespace ElectronicsStorePOS
 
         private void llbCredits_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FrmCredis creditsForm = new();
+            FrmCredits creditsForm = new();
             creditsForm.ShowDialog();
         }
     }
