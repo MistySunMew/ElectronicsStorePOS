@@ -21,7 +21,6 @@ namespace ElectronicsStorePOS.Data
 
         public DbSet<Product> Products { get; set; }
 
-        public DbSet<ProductRelation> ProductRelations { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -70,64 +69,6 @@ namespace ElectronicsStorePOS.Data
                 new Product { ProductID = 41, Category = "Software", Name = "Office Home", Price = 149.99, SKU = "6474446" },
                 new Product { ProductID = 42, Category = "Software", Name = "Windows 11 Home", Price = 139.00, SKU = "6498482" },
                 new Product { ProductID = 43, Category = "Software", Name = "Adobe Acrobat Standard", Price = 358.99, SKU = "6434506" }
-            );
-
-            modelBuilder.Entity<ProductRelation>().HasData(
-                new ProductRelation { Product1ID = 1, Product2ID = 1, RelationRating = 5 },
-                new ProductRelation { Product1ID = 1, Product2ID = 2, RelationRating = 4 },
-                new ProductRelation { Product1ID = 1, Product2ID = 35, RelationRating = 4 },
-                new ProductRelation { Product1ID = 1, Product2ID = 37, RelationRating = 3 },
-                new ProductRelation { Product1ID = 1, Product2ID = 6, RelationRating = 5 },
-                new ProductRelation { Product1ID = 1, Product2ID = 4, RelationRating = 5 },
-                new ProductRelation { Product1ID = 1, Product2ID = 9, RelationRating = 3 },
-                new ProductRelation { Product1ID = 1, Product2ID = 10, RelationRating = 5 },
-                new ProductRelation { Product1ID = 1, Product2ID = 12, RelationRating = 4 },
-
-                new ProductRelation { Product1ID = 2, Product2ID = 1, RelationRating = 5 },
-                new ProductRelation { Product1ID = 2, Product2ID = 2, RelationRating = 5 },
-                new ProductRelation { Product1ID = 2, Product2ID = 15, RelationRating = 3 },
-                new ProductRelation { Product1ID = 2, Product2ID = 35, RelationRating = 5 },
-                new ProductRelation { Product1ID = 2, Product2ID = 37, RelationRating = 4 },
-                new ProductRelation { Product1ID = 2, Product2ID = 5, RelationRating = 4 },
-                new ProductRelation { Product1ID = 2, Product2ID = 6, RelationRating = 5 },
-                new ProductRelation { Product1ID = 2, Product2ID = 11, RelationRating = 5 },
-
-                new ProductRelation { Product1ID = 1, Product2ID = 3, RelationRating = 5 },
-                new ProductRelation { Product1ID = 2, Product2ID = 3, RelationRating = 5 },
-                new ProductRelation { Product1ID = 1, Product2ID = 7, RelationRating = 3 },
-                new ProductRelation { Product1ID = 2, Product2ID = 7, RelationRating = 4 },
-
-                new ProductRelation { Product1ID = 3, Product2ID = 7, RelationRating = 4 },
-                new ProductRelation { Product1ID = 5, Product2ID = 10, RelationRating = 4 },
-                new ProductRelation { Product1ID = 6, Product2ID = 10, RelationRating = 3 },
-
-                new ProductRelation { Product1ID = 42, Product2ID = 42, RelationRating = 5 },
-                new ProductRelation { Product1ID = 40, Product2ID = 43, RelationRating = 5 },
-
-                new ProductRelation { Product1ID = 28, Product2ID = 41, RelationRating = 5 },
-                new ProductRelation { Product1ID = 29, Product2ID = 40, RelationRating = 5 },
-                new ProductRelation { Product1ID = 29, Product2ID = 37, RelationRating = 5 },
-
-                new ProductRelation { Product1ID = 37, Product2ID = 33, RelationRating = 4 },
-                new ProductRelation { Product1ID = 37, Product2ID = 17, RelationRating = 5 },
-                new ProductRelation { Product1ID = 37, Product2ID = 18, RelationRating = 4 },
-                new ProductRelation { Product1ID = 37, Product2ID = 19, RelationRating = 4 },
-
-                new ProductRelation { Product1ID = 38, Product2ID = 16, RelationRating = 4 },
-                new ProductRelation { Product1ID = 38, Product2ID = 20, RelationRating = 5 },
-                new ProductRelation { Product1ID = 38, Product2ID = 21, RelationRating = 5 },
-
-                new ProductRelation { Product1ID = 19, Product2ID = 20, RelationRating = 5 },
-                new ProductRelation { Product1ID = 19, Product2ID = 22, RelationRating = 5 },
-
-                new ProductRelation { Product1ID = 21, Product2ID = 18, RelationRating = 5 },
-                new ProductRelation { Product1ID = 21, Product2ID = 22, RelationRating = 5 },
-
-                new ProductRelation { Product1ID = 23, Product2ID = 18, RelationRating = 5 },
-                new ProductRelation { Product1ID = 23, Product2ID = 20, RelationRating = 5 },
-
-                new ProductRelation { Product1ID = 32, Product2ID = 33, RelationRating = 3 },
-                new ProductRelation { Product1ID = 34, Product2ID = 31, RelationRating = 5 }
             );
         }
     }
