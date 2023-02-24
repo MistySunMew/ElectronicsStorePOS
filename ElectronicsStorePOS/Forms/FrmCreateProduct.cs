@@ -165,7 +165,7 @@ namespace ElectronicsStorePOS
         }
 
         private int clearClicked;
-        private void switch1_CheckedChanged(object sender, EventArgs e)
+        private void Switch1_CheckedChanged(object sender, EventArgs e)
         {
             if (switch1.Checked)
             {
@@ -179,25 +179,25 @@ namespace ElectronicsStorePOS
             }
         }
 
-		private void cbxStepTwo_CheckedChanged(object sender, EventArgs e)
+		private void CbxStepTwo_CheckedChanged(object sender, EventArgs e)
 		{
             this.Size = new Size(Size.Width, Size.Height + 300);
             txtNonsense.Visible = true;
 		}
 
-		private void txtNonsense_Click(object sender, EventArgs e)
+		private void TxtNonsense_Click(object sender, EventArgs e)
 		{
 			this.Size = new Size(Size.Width, Size.Height + 300);
             btnQuit.Visible = true;
             btnNewAll.Visible = true;
 		}
 
-		private void btnQuit_Click(object sender, EventArgs e)
+		private void BtnQuit_Click(object sender, EventArgs e)
 		{
             Close();
 		}
 
-		private void btnNewAll_Click(object sender, EventArgs e)
+		private void BtnNewAll_Click(object sender, EventArgs e)
 		{
             FrmTest frmTest = new();
             frmTest.Show();
