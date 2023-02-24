@@ -106,16 +106,67 @@ namespace ElectronicsStorePOS
         }
 
         /// <summary>
-        /// When called, clears the Products list-box, 
-        /// and re-populates it with updated data from the db
+        /// The various available categories you can sort Product's by
+        /// </summary>
+        public enum SortingCategories
+        {
+            CategoryASC, CategoryDESC, 
+            NameASC, NameDESC, 
+            PriceASC, PriceDESC
+        }
+
+        
+        /// <summary>
+        /// Keeps track of the currently applied sorting category
+        /// </summary>
+        private readonly SortingCategories selectedSortingCategory;
+
+        /// <summary>
+        /// Added temporarily to not break project
         /// </summary>
         private void PopulateProductsLst()
+        {
+            PopulateProductsLstSorted(selectedSortingCategory);
+        }
+
+        /// <summary>
+        /// When called, clears the Products list-box, 
+        /// and re-populates it with updated data from the db,
+        /// sorted in the specified manner
+        /// </summary>
+        private void PopulateProductsLstSorted(SortingCategories sortBy)
         {
             // Clear the Products list-box
             lstProducts.Items.Clear();
 
-            // Get all Products in the db
-            List<Product> allProducts = GetAllProducts();
+            // Create an empty list to store all Products in the db
+            List<Product> allProducts = new();
+
+            // Get all Products from the db, sorted in the specified manner
+            switch (sortBy)
+            {
+                case SortingCategories.CategoryASC:
+                    // Get all products in the db, ordered by Category
+                    allProducts = GetAllProducts(sortBy);
+                    break;
+                case SortingCategories.CategoryDESC:
+                    // Get all products in the db, ordered by Category
+                    allProducts = GetAllProducts(sortBy);
+
+                    // Sort the given list in Descending order
+                    allProducts.Reverse();
+                    break;
+                case SortingCategories.NameASC:
+                    break;
+                case SortingCategories.NameDESC:
+                    break;
+                case SortingCategories.PriceASC:
+                    break;
+                case SortingCategories.PriceDESC:
+                    break;
+                default:
+                    break;
+            }
 
             // Populate the Products list-box with all products in db
             foreach (Product currProduct in allProducts)
@@ -129,15 +180,37 @@ namespace ElectronicsStorePOS
         /// When called, gets and returns a list containing all Products in the db
         /// </summary>
         /// <returns>A list containing all Products in the db</returns>
-        private List<Product> GetAllProducts()
+        private List<Product> GetAllProducts(SortingCategories sortBy)
         {
             // Establish connection to db
             using ProductContext dbContext = new();
 
-            // Get all Products in db
-            List<Product> allProducts = dbContext.Products.ToList();
+            // Create an empty list to store all Products in the db
+            List<Product> allProducts = new();
 
-            // Return the list
+            // Get all Products in db, sorted in the specified manner
+            switch (sortBy)
+            {
+                case SortingCategories.CategoryASC:
+                case SortingCategories.CategoryDESC:
+                    // Get all Products in the db, ordered by Category
+                    allProducts = dbContext.Products.OrderBy(product => product.Category).ToList();
+                    break;
+
+                case SortingCategories.NameASC:
+                case SortingCategories.NameDESC:
+                    // Get all Products in the db, ordered by Name
+                    allProducts = dbContext.Products.OrderBy(product => product.Name).ToList();
+                    break;
+
+                case SortingCategories.PriceASC:
+                case SortingCategories.PriceDESC:
+                    // Get all Products in the db, ordered by Price
+                    allProducts = dbContext.Products.OrderBy(product => product.Price).ToList();
+                    break;
+            }
+
+            // Return the list of all Products in the db
             return allProducts;
         }
 
@@ -208,6 +281,10 @@ namespace ElectronicsStorePOS
             }
         }
 
+        /*************
+         *** OTHER ***
+         *************/
+
         /// <summary>
         /// If a Product has been selected, enables all Product modification buttons
         /// </summary>
@@ -231,7 +308,10 @@ namespace ElectronicsStorePOS
             btnOpenUpdateProductForm.Enabled = false;
         }
 
-        private void llbCredits_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        /// <summary>
+        /// When the "Credits" link is clicked, displays the Credits form
+        /// </summary>
+        private void LlbCredits_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FrmCredits creditsForm = new();
             creditsForm.ShowDialog();
