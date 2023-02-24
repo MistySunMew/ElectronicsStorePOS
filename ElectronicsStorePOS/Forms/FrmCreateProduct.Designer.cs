@@ -238,7 +238,7 @@ namespace ElectronicsStorePOS
 			this.cbxStepTwo.TabIndex = 35;
 			this.cbxStepTwo.UseVisualStyleBackColor = true;
 			this.cbxStepTwo.Visible = false;
-			this.cbxStepTwo.CheckedChanged += new System.EventHandler(this.cbxStepTwo_CheckedChanged);
+			this.cbxStepTwo.CheckedChanged += new System.EventHandler(this.CbxStepTwo_CheckedChanged);
 			// 
 			// switch1
 			// 
@@ -256,7 +256,7 @@ namespace ElectronicsStorePOS
 			this.switch1.TabIndex = 36;
 			this.switch1.UseVisualStyleBackColor = true;
 			this.switch1.Visible = false;
-			this.switch1.CheckedChanged += new System.EventHandler(this.switch1_CheckedChanged);
+			this.switch1.CheckedChanged += new System.EventHandler(this.Switch1_CheckedChanged);
 			// 
 			// txtNonsense
 			// 
@@ -268,7 +268,7 @@ namespace ElectronicsStorePOS
 			this.txtNonsense.TabIndex = 37;
 			this.txtNonsense.Text = "INSERT NONSENSE HERE";
 			this.txtNonsense.Visible = false;
-			this.txtNonsense.Click += new System.EventHandler(this.txtNonsense_Click);
+			this.txtNonsense.Click += new System.EventHandler(this.TxtNonsense_Click);
 			// 
 			// btnQuit
 			// 
@@ -281,7 +281,7 @@ namespace ElectronicsStorePOS
 			this.btnQuit.Text = "Quit Sibelius";
 			this.btnQuit.UseVisualStyleBackColor = true;
 			this.btnQuit.Visible = false;
-			this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+			this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
 			// 
 			// btnNewAll
 			// 
@@ -294,7 +294,7 @@ namespace ElectronicsStorePOS
 			this.btnNewAll.Text = "New All";
 			this.btnNewAll.UseVisualStyleBackColor = true;
 			this.btnNewAll.Visible = false;
-			this.btnNewAll.Click += new System.EventHandler(this.btnNewAll_Click);
+			this.btnNewAll.Click += new System.EventHandler(this.BtnNewAll_Click);
 			// 
 			// FrmCreateProduct
 			// 
