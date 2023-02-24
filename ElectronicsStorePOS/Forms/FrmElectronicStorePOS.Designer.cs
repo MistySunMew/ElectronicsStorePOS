@@ -43,7 +43,7 @@
             // btnOpenCreateProductForm
             // 
             this.btnOpenCreateProductForm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnOpenCreateProductForm.Location = new System.Drawing.Point(444, 28);
+            this.btnOpenCreateProductForm.Location = new System.Drawing.Point(486, 28);
             this.btnOpenCreateProductForm.Name = "btnOpenCreateProductForm";
             this.btnOpenCreateProductForm.Size = new System.Drawing.Size(105, 40);
             this.btnOpenCreateProductForm.TabIndex = 0;
@@ -55,7 +55,7 @@
             // 
             this.btnOpenUpdateProductForm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnOpenUpdateProductForm.Enabled = false;
-            this.btnOpenUpdateProductForm.Location = new System.Drawing.Point(444, 93);
+            this.btnOpenUpdateProductForm.Location = new System.Drawing.Point(486, 94);
             this.btnOpenUpdateProductForm.Name = "btnOpenUpdateProductForm";
             this.btnOpenUpdateProductForm.Size = new System.Drawing.Size(105, 40);
             this.btnOpenUpdateProductForm.TabIndex = 1;
@@ -67,7 +67,7 @@
             // 
             this.btnDeleteProduct.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeleteProduct.Enabled = false;
-            this.btnDeleteProduct.Location = new System.Drawing.Point(444, 158);
+            this.btnDeleteProduct.Location = new System.Drawing.Point(486, 160);
             this.btnDeleteProduct.Name = "btnDeleteProduct";
             this.btnDeleteProduct.Size = new System.Drawing.Size(105, 40);
             this.btnDeleteProduct.TabIndex = 2;
@@ -81,14 +81,14 @@
             this.lstProducts.ItemHeight = 15;
             this.lstProducts.Location = new System.Drawing.Point(32, 58);
             this.lstProducts.Name = "lstProducts";
-            this.lstProducts.Size = new System.Drawing.Size(380, 274);
+            this.lstProducts.Size = new System.Drawing.Size(418, 274);
             this.lstProducts.TabIndex = 3;
             this.lstProducts.SelectedIndexChanged += new System.EventHandler(this.LstProducts_SelectedIndexChanged);
             // 
             // btnOpenCartForm
             // 
             this.btnOpenCartForm.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnOpenCartForm.Location = new System.Drawing.Point(444, 289);
+            this.btnOpenCartForm.Location = new System.Drawing.Point(486, 292);
             this.btnOpenCartForm.Name = "btnOpenCartForm";
             this.btnOpenCartForm.Size = new System.Drawing.Size(105, 40);
             this.btnOpenCartForm.TabIndex = 4;
@@ -100,7 +100,7 @@
             // 
             this.btnAddToCart.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddToCart.Enabled = false;
-            this.btnAddToCart.Location = new System.Drawing.Point(444, 224);
+            this.btnAddToCart.Location = new System.Drawing.Point(486, 226);
             this.btnAddToCart.Name = "btnAddToCart";
             this.btnAddToCart.Size = new System.Drawing.Size(105, 40);
             this.btnAddToCart.TabIndex = 5;
@@ -127,7 +127,7 @@
             this.cbxSortingCategory.Location = new System.Drawing.Point(81, 28);
             this.cbxSortingCategory.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.cbxSortingCategory.Name = "cbxSortingCategory";
-            this.cbxSortingCategory.Size = new System.Drawing.Size(331, 23);
+            this.cbxSortingCategory.Size = new System.Drawing.Size(369, 23);
             this.cbxSortingCategory.TabIndex = 27;
             this.cbxSortingCategory.SelectedIndexChanged += new System.EventHandler(this.CbxSortingCategory_SelectedIndexChanged);
             // 
@@ -145,7 +145,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(581, 361);
+            this.ClientSize = new System.Drawing.Size(621, 361);
             this.Controls.Add(this.cbxSortingCategory);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.llbCredits);
