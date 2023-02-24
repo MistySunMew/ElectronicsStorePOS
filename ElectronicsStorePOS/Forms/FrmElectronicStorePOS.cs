@@ -115,11 +115,31 @@ namespace ElectronicsStorePOS
             PriceASC, PriceDESC
         }
 
-        
         /// <summary>
-        /// Keeps track of the currently applied sorting category
+        /// When a sorting category is selected in the sorting options, 
         /// </summary>
-        private readonly SortingCategories selectedSortingCategory;
+        private void CbxSortingCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbxSortingCategory.SelectedIndex == 0)
+            {
+                // Set the selected sorting category to "Category - Ascending"
+                selectedSortingCategory = SortingCategories.CategoryASC;
+            }
+            else if (cbxSortingCategory.SelectedIndex == 1)
+            {
+                // Set the selected sorting category to "Category - Descending"
+                selectedSortingCategory = SortingCategories.CategoryDESC;
+            }
+
+            // Sort the Product's list-box in the chosen manner
+            PopulateProductsLstSorted(selectedSortingCategory);
+        }
+
+        /// <summary>
+        /// Keeps track of the currently applied sorting category, 
+        /// default is sorting by Product Category, ASC
+        /// </summary>
+        private SortingCategories selectedSortingCategory = SortingCategories.CategoryASC;
 
         /// <summary>
         /// Added temporarily to not break project
