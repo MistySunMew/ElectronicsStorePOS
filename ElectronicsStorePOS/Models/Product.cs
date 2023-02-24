@@ -56,7 +56,7 @@ namespace ElectronicsStorePOS.Models
         /// <returns>The Product's name and price as a string</returns>
         public override string ToString()
         {
-            return $"{Name} - {Price:c}";
+            return $"{Name} ({Category}) - {Price:c}";
         }
     }
 }
