@@ -111,14 +111,14 @@
             // llbCredits
             // 
             this.llbCredits.AutoSize = true;
-            this.llbCredits.Location = new System.Drawing.Point(428, 337);
+            this.llbCredits.Location = new System.Drawing.Point(32, 337);
             this.llbCredits.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.llbCredits.Name = "llbCredits";
             this.llbCredits.Size = new System.Drawing.Size(44, 15);
             this.llbCredits.TabIndex = 6;
             this.llbCredits.TabStop = true;
             this.llbCredits.Text = "Credits";
-            this.llbCredits.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llbCredits_LinkClicked);
+            this.llbCredits.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LlbCredits_LinkClicked);
             // 
             // cbxSortingCategory
             // 
@@ -129,6 +129,7 @@
             this.cbxSortingCategory.Name = "cbxSortingCategory";
             this.cbxSortingCategory.Size = new System.Drawing.Size(283, 23);
             this.cbxSortingCategory.TabIndex = 27;
+            this.cbxSortingCategory.SelectedIndexChanged += new System.EventHandler(this.CbxSortingCategory_SelectedIndexChanged);
             // 
             // label5
             // 
