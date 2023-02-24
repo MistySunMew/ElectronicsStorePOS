@@ -49,7 +49,7 @@
             this.lstProductsInCart.Location = new System.Drawing.Point(23, 22);
             this.lstProductsInCart.Name = "lstProductsInCart";
             this.lstProductsInCart.Size = new System.Drawing.Size(418, 154);
-            this.lstProductsInCart.TabIndex = 4;
+            this.lstProductsInCart.TabIndex = 0;
             this.lstProductsInCart.SelectedIndexChanged += new System.EventHandler(this.LstProductsInCart_SelectedIndexChanged);
             // 
             // lblSubtotal
@@ -58,7 +58,7 @@
             this.lblSubtotal.Location = new System.Drawing.Point(17, 23);
             this.lblSubtotal.Name = "lblSubtotal";
             this.lblSubtotal.Size = new System.Drawing.Size(54, 15);
-            this.lblSubtotal.TabIndex = 5;
+            this.lblSubtotal.TabIndex = 0;
             this.lblSubtotal.Text = "Subtotal:";
             // 
             // txtSubTotal
@@ -67,7 +67,7 @@
             this.txtSubTotal.Location = new System.Drawing.Point(77, 20);
             this.txtSubTotal.Name = "txtSubTotal";
             this.txtSubTotal.Size = new System.Drawing.Size(128, 23);
-            this.txtSubTotal.TabIndex = 6;
+            this.txtSubTotal.TabIndex = 3;
             this.txtSubTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtTaxTotal
@@ -76,7 +76,7 @@
             this.txtTaxTotal.Location = new System.Drawing.Point(77, 50);
             this.txtTaxTotal.Name = "txtTaxTotal";
             this.txtTaxTotal.Size = new System.Drawing.Size(128, 23);
-            this.txtTaxTotal.TabIndex = 8;
+            this.txtTaxTotal.TabIndex = 4;
             this.txtTaxTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblTax
@@ -85,7 +85,7 @@
             this.lblTax.Location = new System.Drawing.Point(44, 53);
             this.lblTax.Name = "lblTax";
             this.lblTax.Size = new System.Drawing.Size(27, 15);
-            this.lblTax.TabIndex = 7;
+            this.lblTax.TabIndex = 1;
             this.lblTax.Text = "Tax:";
             // 
             // txtTotal
@@ -94,7 +94,7 @@
             this.txtTotal.Location = new System.Drawing.Point(77, 79);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(128, 23);
-            this.txtTotal.TabIndex = 10;
+            this.txtTotal.TabIndex = 5;
             this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblTotal
@@ -103,7 +103,7 @@
             this.lblTotal.Location = new System.Drawing.Point(36, 82);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(35, 15);
-            this.lblTotal.TabIndex = 9;
+            this.lblTotal.TabIndex = 2;
             this.lblTotal.Text = "Total:";
             // 
             // btnRemoveProductFromCart
@@ -113,7 +113,7 @@
             this.btnRemoveProductFromCart.Location = new System.Drawing.Point(577, 136);
             this.btnRemoveProductFromCart.Name = "btnRemoveProductFromCart";
             this.btnRemoveProductFromCart.Size = new System.Drawing.Size(105, 40);
-            this.btnRemoveProductFromCart.TabIndex = 11;
+            this.btnRemoveProductFromCart.TabIndex = 3;
             this.btnRemoveProductFromCart.Text = "Remove \r\nProduct";
             this.btnRemoveProductFromCart.UseVisualStyleBackColor = true;
             this.btnRemoveProductFromCart.Click += new System.EventHandler(this.BtnRemoveProductFromCart_Click);
@@ -125,7 +125,7 @@
             this.btnReturnHome.Margin = new System.Windows.Forms.Padding(2);
             this.btnReturnHome.Name = "btnReturnHome";
             this.btnReturnHome.Size = new System.Drawing.Size(105, 40);
-            this.btnReturnHome.TabIndex = 30;
+            this.btnReturnHome.TabIndex = 2;
             this.btnReturnHome.Text = "Return \r\nHome";
             this.btnReturnHome.UseVisualStyleBackColor = true;
             this.btnReturnHome.Click += new System.EventHandler(this.BtnReturnHome_Click);
@@ -143,7 +143,7 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Size = new System.Drawing.Size(219, 112);
-            this.groupBox1.TabIndex = 31;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
             // FrmCart
