@@ -110,25 +110,53 @@ namespace ElectronicsStorePOS
             DisableButtons();
         }
 
-        /**************
-         *** SELECT ***
-         **************/
+        /***************
+         *** SORTING ***
+         ***************/
 
         /// <summary>
         /// The various available categories you can sort Product's by
         /// </summary>
         public enum SortingCategories
         {
-            CategoryASC, CategoryDESC, 
-            NameASC, NameDESC, 
-            PriceASC, PriceDESC
+            /// <summary>
+            /// Sorting all Product's by Category, Ascending
+            /// </summary>
+            CategoryASC,
+
+            /// <summary>
+            /// Sorting all Product's by Category, Descending
+            /// </summary>
+            CategoryDESC,
+
+            /// <summary>
+            /// Sorting all Product's by Name, Ascending
+            /// </summary>
+            NameASC,
+
+            /// <summary>
+            /// Sorting all Product's by Name, Descending
+            /// </summary>
+            NameDESC,
+
+            /// <summary>
+            /// Sorting all Product's by Price, Ascending
+            /// </summary>
+            PriceASC,
+
+            /// <summary>
+            /// Sorting all Product's by Price, Descending
+            /// </summary>
+            PriceDESC
         }
 
         /// <summary>
-        /// When a sorting category is selected in the sorting options, 
+        /// When a sorting option is selected in the sorting category combo-box, 
+        /// sorts all Product's in the Products list-box in that manner
         /// </summary>
         private void CbxSortingCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // Sorting by Category
             if (cbxSortingCategory.SelectedIndex == 0)
             {
                 // Set the selected sorting category to "Category - Ascending"
@@ -138,6 +166,30 @@ namespace ElectronicsStorePOS
             {
                 // Set the selected sorting category to "Category - Descending"
                 selectedSortingCategory = SortingCategories.CategoryDESC;
+            }
+
+            // Sorting by Name
+            if (cbxSortingCategory.SelectedIndex == 2)
+            {
+                // Set the selected sorting category to "Name - Ascending"
+                selectedSortingCategory = SortingCategories.NameASC;
+            }
+            else if (cbxSortingCategory.SelectedIndex == 3)
+            {
+                // Set the selected sorting category to "Name - Descending"
+                selectedSortingCategory = SortingCategories.NameDESC;
+            }
+
+            // Sorting by Price
+            if (cbxSortingCategory.SelectedIndex == 4)
+            {
+                // Set the selected sorting category to "Price - Ascending"
+                selectedSortingCategory = SortingCategories.PriceASC;
+            }
+            else if (cbxSortingCategory.SelectedIndex == 5)
+            {
+                // Set the selected sorting category to "Price - Descending"
+                selectedSortingCategory = SortingCategories.PriceDESC;
             }
 
             // Sort the Product's list-box in the chosen manner
@@ -188,7 +240,7 @@ namespace ElectronicsStorePOS
                     // Get all products in the db
                     allProducts = GetAllProducts(sortBy);
 
-                    // Sort the given list in Descending order
+                    // Sort the given list in descending order
                     allProducts.Reverse();
                     break;
             }
@@ -196,17 +248,21 @@ namespace ElectronicsStorePOS
             // Populate the Products list-box with all products in db
             foreach (Product currProduct in allProducts)
             {
-                // Display the Product's name and price
+                // Display the Product's name, category and price
                 lstProducts.Items.Add(currProduct);
             }
         }
 
+        /**************
+         *** SELECT ***
+         **************/
+
         /// <summary>
-        /// When called, gets and returns a list containing all Products in the db
+        /// When called, gets and returns a list containing all Products in the db, sorted by the specified category
         /// </summary>
-        /// <param name="sortBy">The order by which the Products coming from the db should be sorted</param>
+        /// <param name="sortBy">The category by which the Products coming from the db should be sorted</param>
         /// <returns>A list containing all Products in the db</returns>
-        private List<Product> GetAllProducts(SortingCategories sortBy)
+        private static List<Product> GetAllProducts(SortingCategories sortBy)
         {
             // Establish connection to db
             using ProductContext dbContext = new();
@@ -214,7 +270,7 @@ namespace ElectronicsStorePOS
             // Create an empty list to store all Products in the db
             List<Product> allProducts = new();
 
-            // Get all Products in db, sorted in the specified manner
+            // Get all Products in db, sorted by the specified category
             switch (sortBy)
             {
                 case SortingCategories.CategoryASC:
