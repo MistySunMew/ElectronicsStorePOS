@@ -48,7 +48,7 @@
             this.lstProductsInCart.ItemHeight = 15;
             this.lstProductsInCart.Location = new System.Drawing.Point(23, 22);
             this.lstProductsInCart.Name = "lstProductsInCart";
-            this.lstProductsInCart.Size = new System.Drawing.Size(380, 154);
+            this.lstProductsInCart.Size = new System.Drawing.Size(418, 154);
             this.lstProductsInCart.TabIndex = 4;
             this.lstProductsInCart.SelectedIndexChanged += new System.EventHandler(this.LstProductsInCart_SelectedIndexChanged);
             // 
@@ -110,7 +110,7 @@
             // 
             this.btnRemoveProductFromCart.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemoveProductFromCart.Enabled = false;
-            this.btnRemoveProductFromCart.Location = new System.Drawing.Point(541, 136);
+            this.btnRemoveProductFromCart.Location = new System.Drawing.Point(577, 136);
             this.btnRemoveProductFromCart.Name = "btnRemoveProductFromCart";
             this.btnRemoveProductFromCart.Size = new System.Drawing.Size(105, 40);
             this.btnRemoveProductFromCart.TabIndex = 11;
@@ -121,8 +121,8 @@
             // btnReturnHome
             // 
             this.btnReturnHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReturnHome.Location = new System.Drawing.Point(427, 136);
-            this.btnReturnHome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReturnHome.Location = new System.Drawing.Point(463, 136);
+            this.btnReturnHome.Margin = new System.Windows.Forms.Padding(2);
             this.btnReturnHome.Name = "btnReturnHome";
             this.btnReturnHome.Size = new System.Drawing.Size(105, 40);
             this.btnReturnHome.TabIndex = 30;
@@ -138,7 +138,7 @@
             this.groupBox1.Controls.Add(this.txtTotal);
             this.groupBox1.Controls.Add(this.txtTaxTotal);
             this.groupBox1.Controls.Add(this.lblTotal);
-            this.groupBox1.Location = new System.Drawing.Point(427, 14);
+            this.groupBox1.Location = new System.Drawing.Point(463, 14);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -150,7 +150,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(671, 195);
+            this.ClientSize = new System.Drawing.Size(708, 195);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnReturnHome);
             this.Controls.Add(this.btnRemoveProductFromCart);
