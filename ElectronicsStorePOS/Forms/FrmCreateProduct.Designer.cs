@@ -88,7 +88,7 @@ namespace ElectronicsStorePOS
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(120, 21);
+            this.label1.Location = new System.Drawing.Point(125, 22);
             this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 15);
@@ -98,7 +98,7 @@ namespace ElectronicsStorePOS
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(127, 45);
+            this.label2.Location = new System.Drawing.Point(131, 46);
             this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 15);
@@ -108,7 +108,7 @@ namespace ElectronicsStorePOS
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(90, 69);
+            this.label3.Location = new System.Drawing.Point(97, 70);
             this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 15);
@@ -118,7 +118,7 @@ namespace ElectronicsStorePOS
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 119);
+            this.label4.Location = new System.Drawing.Point(30, 119);
             this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(137, 15);
@@ -140,7 +140,7 @@ namespace ElectronicsStorePOS
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(104, 93);
+            this.label5.Location = new System.Drawing.Point(109, 94);
             this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 15);
@@ -162,7 +162,7 @@ namespace ElectronicsStorePOS
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(132, 143);
+            this.label6.Location = new System.Drawing.Point(136, 143);
             this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(31, 15);
