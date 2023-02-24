@@ -127,6 +127,7 @@ namespace ElectronicsStorePOS
             // 
             // cbxProductCategory
             // 
+            this.cbxProductCategory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbxProductCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxProductCategory.FormattingEnabled = true;
             this.cbxProductCategory.Location = new System.Drawing.Point(169, 91);
@@ -148,6 +149,7 @@ namespace ElectronicsStorePOS
             // 
             // cbxGameRating
             // 
+            this.cbxGameRating.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbxGameRating.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxGameRating.Enabled = false;
             this.cbxGameRating.FormattingEnabled = true;
@@ -230,6 +232,7 @@ namespace ElectronicsStorePOS
             // cbxStepTwo
             // 
             this.cbxStepTwo.AutoSize = true;
+            this.cbxStepTwo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbxStepTwo.Enabled = false;
             this.cbxStepTwo.Location = new System.Drawing.Point(472, 189);
             this.cbxStepTwo.Name = "cbxStepTwo";
@@ -242,6 +245,7 @@ namespace ElectronicsStorePOS
             // switch1
             // 
             this.switch1.AutoSize = true;
+            this.switch1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.switch1.Enabled = false;
             this.switch1.Location = new System.Drawing.Point(384, 187);
             this.switch1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

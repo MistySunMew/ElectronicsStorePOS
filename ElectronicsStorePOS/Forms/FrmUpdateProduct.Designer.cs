@@ -55,7 +55,7 @@
             this.btnReturnHome.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.btnReturnHome.Name = "btnReturnHome";
             this.btnReturnHome.Size = new System.Drawing.Size(105, 40);
-            this.btnReturnHome.TabIndex = 29;
+            this.btnReturnHome.TabIndex = 2;
             this.btnReturnHome.Text = "Return \r\nHome";
             this.btnReturnHome.UseVisualStyleBackColor = true;
             this.btnReturnHome.Click += new System.EventHandler(this.BtnReturnHome_Click);
@@ -67,7 +67,7 @@
             this.btnClearForm.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.btnClearForm.Name = "btnClearForm";
             this.btnClearForm.Size = new System.Drawing.Size(105, 40);
-            this.btnClearForm.TabIndex = 28;
+            this.btnClearForm.TabIndex = 3;
             this.btnClearForm.Text = "Clear \r\nForm";
             this.btnClearForm.UseVisualStyleBackColor = true;
             this.btnClearForm.Click += new System.EventHandler(this.BtnClearForm_Click);
@@ -79,7 +79,7 @@
             this.btnUpdateProduct.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.btnUpdateProduct.Name = "btnUpdateProduct";
             this.btnUpdateProduct.Size = new System.Drawing.Size(105, 40);
-            this.btnUpdateProduct.TabIndex = 27;
+            this.btnUpdateProduct.TabIndex = 1;
             this.btnUpdateProduct.Text = "Update \r\nProduct";
             this.btnUpdateProduct.UseVisualStyleBackColor = true;
             this.btnUpdateProduct.Click += new System.EventHandler(this.BtnUpdateProduct_Click);
@@ -90,21 +90,23 @@
             this.txtProductSKU.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.txtProductSKU.Name = "txtProductSKU";
             this.txtProductSKU.Size = new System.Drawing.Size(129, 23);
-            this.txtProductSKU.TabIndex = 26;
+            this.txtProductSKU.TabIndex = 11;
             // 
             // cbxProductCategory
             // 
+            this.cbxProductCategory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbxProductCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxProductCategory.FormattingEnabled = true;
             this.cbxProductCategory.Location = new System.Drawing.Point(169, 91);
             this.cbxProductCategory.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.cbxProductCategory.Name = "cbxProductCategory";
             this.cbxProductCategory.Size = new System.Drawing.Size(129, 23);
-            this.cbxProductCategory.TabIndex = 25;
+            this.cbxProductCategory.TabIndex = 9;
             this.cbxProductCategory.SelectedIndexChanged += new System.EventHandler(this.CbxProductCategory_SelectedIndexChanged);
             // 
             // cbxGameRating
             // 
+            this.cbxGameRating.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbxGameRating.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxGameRating.Enabled = false;
             this.cbxGameRating.FormattingEnabled = true;
@@ -112,7 +114,7 @@
             this.cbxGameRating.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.cbxGameRating.Name = "cbxGameRating";
             this.cbxGameRating.Size = new System.Drawing.Size(129, 23);
-            this.cbxGameRating.TabIndex = 24;
+            this.cbxGameRating.TabIndex = 10;
             // 
             // txtProductDesc
             // 
@@ -120,7 +122,7 @@
             this.txtProductDesc.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.txtProductDesc.Name = "txtProductDesc";
             this.txtProductDesc.Size = new System.Drawing.Size(129, 23);
-            this.txtProductDesc.TabIndex = 23;
+            this.txtProductDesc.TabIndex = 8;
             // 
             // txtProductPrice
             // 
@@ -128,7 +130,7 @@
             this.txtProductPrice.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.txtProductPrice.Name = "txtProductPrice";
             this.txtProductPrice.Size = new System.Drawing.Size(129, 23);
-            this.txtProductPrice.TabIndex = 22;
+            this.txtProductPrice.TabIndex = 7;
             // 
             // txtProductName
             // 
@@ -136,7 +138,7 @@
             this.txtProductName.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.Size = new System.Drawing.Size(129, 23);
-            this.txtProductName.TabIndex = 21;
+            this.txtProductName.TabIndex = 6;
             // 
             // label6
             // 
@@ -145,7 +147,7 @@
             this.label6.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(31, 15);
-            this.label6.TabIndex = 20;
+            this.label6.TabIndex = 5;
             this.label6.Text = "SKU:";
             // 
             // label5
@@ -155,7 +157,7 @@
             this.label5.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 15);
-            this.label5.TabIndex = 19;
+            this.label5.TabIndex = 3;
             this.label5.Text = "Category:";
             // 
             // label4
@@ -165,7 +167,7 @@
             this.label4.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(137, 15);
-            this.label4.TabIndex = 18;
+            this.label4.TabIndex = 4;
             this.label4.Text = "Rating (Only for Games):";
             // 
             // label3
@@ -175,7 +177,7 @@
             this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 15);
-            this.label3.TabIndex = 17;
+            this.label3.TabIndex = 2;
             this.label3.Text = "Description:";
             // 
             // label2
@@ -185,7 +187,7 @@
             this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 15);
-            this.label2.TabIndex = 16;
+            this.label2.TabIndex = 1;
             this.label2.Text = "Price:";
             // 
             // label1
@@ -195,7 +197,7 @@
             this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 15);
-            this.label1.TabIndex = 15;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Name:";
             // 
             // groupBox1
@@ -217,7 +219,7 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Size = new System.Drawing.Size(326, 178);
-            this.groupBox1.TabIndex = 30;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // FrmUpdateProduct

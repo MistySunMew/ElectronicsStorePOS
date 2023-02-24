@@ -44,6 +44,7 @@
             // 
             // lstProductsInCart
             // 
+            this.lstProductsInCart.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lstProductsInCart.FormattingEnabled = true;
             this.lstProductsInCart.ItemHeight = 15;
             this.lstProductsInCart.Location = new System.Drawing.Point(23, 22);

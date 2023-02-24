@@ -46,7 +46,7 @@
             this.btnOpenCreateProductForm.Location = new System.Drawing.Point(486, 28);
             this.btnOpenCreateProductForm.Name = "btnOpenCreateProductForm";
             this.btnOpenCreateProductForm.Size = new System.Drawing.Size(105, 40);
-            this.btnOpenCreateProductForm.TabIndex = 4;
+            this.btnOpenCreateProductForm.TabIndex = 3;
             this.btnOpenCreateProductForm.Text = "Create \r\nProduct";
             this.btnOpenCreateProductForm.UseVisualStyleBackColor = true;
             this.btnOpenCreateProductForm.Click += new System.EventHandler(this.BtnOpenCreateProductForm_Click);
@@ -58,7 +58,7 @@
             this.btnOpenUpdateProductForm.Location = new System.Drawing.Point(486, 94);
             this.btnOpenUpdateProductForm.Name = "btnOpenUpdateProductForm";
             this.btnOpenUpdateProductForm.Size = new System.Drawing.Size(105, 40);
-            this.btnOpenUpdateProductForm.TabIndex = 5;
+            this.btnOpenUpdateProductForm.TabIndex = 4;
             this.btnOpenUpdateProductForm.Text = "Update \r\nProduct";
             this.btnOpenUpdateProductForm.UseVisualStyleBackColor = true;
             this.btnOpenUpdateProductForm.Click += new System.EventHandler(this.BtnOpenUpdateProductForm_Click);
@@ -70,13 +70,14 @@
             this.btnDeleteProduct.Location = new System.Drawing.Point(486, 160);
             this.btnDeleteProduct.Name = "btnDeleteProduct";
             this.btnDeleteProduct.Size = new System.Drawing.Size(105, 40);
-            this.btnDeleteProduct.TabIndex = 6;
+            this.btnDeleteProduct.TabIndex = 5;
             this.btnDeleteProduct.Text = "Delete \r\nProduct";
             this.btnDeleteProduct.UseVisualStyleBackColor = true;
             this.btnDeleteProduct.Click += new System.EventHandler(this.BtnDeleteProduct_Click);
             // 
             // lstProducts
             // 
+            this.lstProducts.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lstProducts.FormattingEnabled = true;
             this.lstProducts.ItemHeight = 15;
             this.lstProducts.Location = new System.Drawing.Point(32, 58);
@@ -91,7 +92,7 @@
             this.btnOpenCartForm.Location = new System.Drawing.Point(486, 292);
             this.btnOpenCartForm.Name = "btnOpenCartForm";
             this.btnOpenCartForm.Size = new System.Drawing.Size(105, 40);
-            this.btnOpenCartForm.TabIndex = 8;
+            this.btnOpenCartForm.TabIndex = 7;
             this.btnOpenCartForm.Text = "Go To \r\nCart";
             this.btnOpenCartForm.UseVisualStyleBackColor = true;
             this.btnOpenCartForm.Click += new System.EventHandler(this.BtnOpenCartForm_Click);
@@ -103,7 +104,7 @@
             this.btnAddToCart.Location = new System.Drawing.Point(486, 226);
             this.btnAddToCart.Name = "btnAddToCart";
             this.btnAddToCart.Size = new System.Drawing.Size(105, 40);
-            this.btnAddToCart.TabIndex = 7;
+            this.btnAddToCart.TabIndex = 6;
             this.btnAddToCart.Text = "Add To \r\nCart";
             this.btnAddToCart.UseVisualStyleBackColor = true;
             this.btnAddToCart.Click += new System.EventHandler(this.BtnAddToCart_Click);
@@ -115,13 +116,14 @@
             this.llbCredits.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.llbCredits.Name = "llbCredits";
             this.llbCredits.Size = new System.Drawing.Size(44, 15);
-            this.llbCredits.TabIndex = 3;
+            this.llbCredits.TabIndex = 8;
             this.llbCredits.TabStop = true;
             this.llbCredits.Text = "Credits";
             this.llbCredits.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LlbCredits_LinkClicked);
             // 
             // cbxSortingCategory
             // 
+            this.cbxSortingCategory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbxSortingCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxSortingCategory.FormattingEnabled = true;
             this.cbxSortingCategory.Location = new System.Drawing.Point(81, 28);
