@@ -18,15 +18,17 @@ When first running the project, you need to run the following command: ` Update-
 - **Zalman Izak** - [theZalmanian](https://github.com/theZalmanian)
 
 ## Project Screenshots
-#### The main program form, displaying all products in the database:
-![image](https://user-images.githubusercontent.com/103011701/219911786-91dc6a2e-5fdf-4471-8902-c1e4727303ec.png)
+#### The main program form, displaying all products in the database, sorted in default order:
+![image](https://user-images.githubusercontent.com/103011701/221107101-5064b778-2a4e-4b4a-a3c9-c6f868651730.png)
+#### The main program form, displaying all products in the database, sorted by price, descending:
+![image](https://user-images.githubusercontent.com/103011701/221107218-8ce3a09a-1895-4a32-986a-145d39fb51a8.png)
 #### The main program form, when a product has been selected:
-![image](https://user-images.githubusercontent.com/103011701/219912093-1050d9ea-aed6-4bba-84ab-048dd5f337cb.png)
+![image](https://user-images.githubusercontent.com/103011701/221107442-e5ac6a4a-5ff8-47ea-b4ea-c9167e81d2f6.png)
 #### The product creation form:
-![image](https://user-images.githubusercontent.com/103011701/219912805-6d81d5c4-7070-485c-994f-ac509ea59de6.png)
+![image](https://user-images.githubusercontent.com/103011701/221108090-6b7b094e-4297-42f4-9e43-26a28ed45585.png)
 #### The update product form:
-![image](https://user-images.githubusercontent.com/103011701/219914857-2ef59aaf-f023-4c62-8d88-515a3226a099.png)
+![image](https://user-images.githubusercontent.com/103011701/221108357-33ddf96a-5cbf-4717-a456-c1cfe6186c99.png)
 #### The product cart, displaying all added products, with the final product selected:
-![image](https://user-images.githubusercontent.com/103011701/219915684-7315d2ae-dcfc-43d6-ad0c-961936630adf.png)
+![image](https://user-images.githubusercontent.com/103011701/221108667-593b2749-fb7c-457c-9f67-a0434059d0ff.png)
 #### The product cart, with the final product having been removed from the cart:
-![image](https://user-images.githubusercontent.com/103011701/219915484-8438a0c5-a54c-4f15-a02d-50d7f716ba89.png)
+![image](https://user-images.githubusercontent.com/103011701/221108737-a7177643-b4c8-470c-a235-1db29b7dded6.png)
