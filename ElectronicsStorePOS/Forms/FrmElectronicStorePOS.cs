@@ -14,6 +14,28 @@ namespace ElectronicsStorePOS
 		}
 
         /// <summary>
+        /// When "Home" form is opened, displays all Products in db,
+        /// sorted by category, in ascending order
+        /// </summary>
+        private void FrmElectronicStorePOS_Load(object sender, EventArgs e)
+        {
+            // Add all sorting options to the sorting category combo-box
+            cbxSortingCategory.Items.Add("Category - Ascending");
+            cbxSortingCategory.Items.Add("Category - Descending");
+            cbxSortingCategory.Items.Add("Name - Ascending");
+            cbxSortingCategory.Items.Add("Name - Descending");
+            cbxSortingCategory.Items.Add("Price - Ascending");
+            cbxSortingCategory.Items.Add("Price - Descending");
+
+            // Populate the Products list-box
+            PopulateProductsLst();
+        }
+
+        /**************
+         *** CREATE ***
+         **************/
+
+        /// <summary>
         /// When the "Create Product" button is clicked, creates 
         /// and displays an instance of the CreateProduct form
         /// </summary>
@@ -31,6 +53,10 @@ namespace ElectronicsStorePOS
             // Disables buttons
             DisableButtons();
         }
+
+        /**************
+         *** UPDATE ***
+         **************/
 
         /// <summary>
         /// When the "Update Product" button is clicked, creates 
@@ -65,7 +91,7 @@ namespace ElectronicsStorePOS
             using ProductContext dbContext = new();
 
             // Get the currently selected Product
-            Product selectedProduct = (Product)lstProducts.SelectedItem;
+            Product selectedProduct = (Product) lstProducts.SelectedItem;
 
             // Setup delete query
             dbContext.Remove(selectedProduct);
@@ -87,23 +113,6 @@ namespace ElectronicsStorePOS
         /**************
          *** SELECT ***
          **************/
-
-        /// <summary>
-        /// When "Home" form is opened, displays all Products in db
-        /// </summary>
-        private void FrmElectronicStorePOS_Load(object sender, EventArgs e)
-        {
-            // Add all sorting options to the sorting category combo-box
-            cbxSortingCategory.Items.Add("Category - Ascending");
-            cbxSortingCategory.Items.Add("Category - Descending");
-            cbxSortingCategory.Items.Add("Name - Ascending");
-            cbxSortingCategory.Items.Add("Name - Descending");
-            cbxSortingCategory.Items.Add("Price - Ascending");
-            cbxSortingCategory.Items.Add("Price - Descending");
-
-            // Populate the Products list-box
-            PopulateProductsLst();
-        }
 
         /// <summary>
         /// The various available categories you can sort Product's by
@@ -136,17 +145,18 @@ namespace ElectronicsStorePOS
         }
 
         /// <summary>
-        /// Keeps track of the currently applied sorting category, 
-        /// default is sorting by Product Category, ASC
+        /// Keeps track of the currently applied sorting category
         /// </summary>
-        private SortingCategories selectedSortingCategory = SortingCategories.CategoryASC;
+        private SortingCategories selectedSortingCategory;
 
         /// <summary>
-        /// Added temporarily to not break project
+        /// When called, clears the Products list-box, 
+        /// and re-populates it with updated data from the db,
+        /// sorted in the default order (category ascending)
         /// </summary>
         private void PopulateProductsLst()
         {
-            PopulateProductsLstSorted(selectedSortingCategory);
+            PopulateProductsLstSorted(SortingCategories.CategoryASC);
         }
 
         /// <summary>
@@ -166,25 +176,20 @@ namespace ElectronicsStorePOS
             switch (sortBy)
             {
                 case SortingCategories.CategoryASC:
-                    // Get all products in the db, ordered by Category
+                case SortingCategories.NameASC:
+                case SortingCategories.PriceASC:
+                    // Get all products in the db, sorted in ascending order
                     allProducts = GetAllProducts(sortBy);
                     break;
+
                 case SortingCategories.CategoryDESC:
-                    // Get all products in the db, ordered by Category
+                case SortingCategories.NameDESC:
+                case SortingCategories.PriceDESC:
+                    // Get all products in the db
                     allProducts = GetAllProducts(sortBy);
 
                     // Sort the given list in Descending order
                     allProducts.Reverse();
-                    break;
-                case SortingCategories.NameASC:
-                    break;
-                case SortingCategories.NameDESC:
-                    break;
-                case SortingCategories.PriceASC:
-                    break;
-                case SortingCategories.PriceDESC:
-                    break;
-                default:
                     break;
             }
 
@@ -199,6 +204,7 @@ namespace ElectronicsStorePOS
         /// <summary>
         /// When called, gets and returns a list containing all Products in the db
         /// </summary>
+        /// <param name="sortBy">The order by which the Products coming from the db should be sorted</param>
         /// <returns>A list containing all Products in the db</returns>
         private List<Product> GetAllProducts(SortingCategories sortBy)
         {
