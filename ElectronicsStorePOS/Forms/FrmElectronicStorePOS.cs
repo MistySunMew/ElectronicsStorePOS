@@ -93,6 +93,14 @@ namespace ElectronicsStorePOS
         /// </summary>
         private void FrmElectronicStorePOS_Load(object sender, EventArgs e)
         {
+            // Add all sorting options to the sorting category combo-box
+            cbxSortingCategory.Items.Add("Category - Ascending");
+            cbxSortingCategory.Items.Add("Category - Descending");
+            cbxSortingCategory.Items.Add("Name - Ascending");
+            cbxSortingCategory.Items.Add("Name - Descending");
+            cbxSortingCategory.Items.Add("Price - Ascending");
+            cbxSortingCategory.Items.Add("Price - Descending");
+
             // Populate the Products list-box
             PopulateProductsLst();
         }
@@ -101,7 +109,7 @@ namespace ElectronicsStorePOS
         /// When called, clears the Products list-box, 
         /// and re-populates it with updated data from the db
         /// </summary>
-        public void PopulateProductsLst()
+        private void PopulateProductsLst()
         {
             // Clear the Products list-box
             lstProducts.Items.Clear();
